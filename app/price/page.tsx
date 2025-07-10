@@ -22,7 +22,7 @@ export default function PricingPage() {
               Choose The Perfect Plan For Your Practice
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your law firm's
+              Flexible pricing options designed to scale with your law firm&apos;s
               needs. Start free and upgrade as you grow.
             </p>
           </div>

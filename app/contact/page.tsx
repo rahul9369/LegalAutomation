@@ -17,7 +17,7 @@ export default function ContactPage() {
               className="text-2xl md:text-3xl font-bold leading-tight 
                bg-gradient-to-r from-[#006261] to-[#01B879] 
                bg-clip-text text-transparent">
-              Let's Discuss About How We Can Help
+              Let&apos;s Discuss About How We Can Help
               <br />
               You Excel in Your Legal Space
             </h1>
@@ -40,9 +40,9 @@ export default function ContactPage() {
 
                   <div className="space-y-6">
                     <p className="text-gray-300 leading-relaxed">
-                      We'd Love To Hear From You. Whether You Have
+                      We&apos;d Love To Hear From You. Whether You Have
                       <br />A Question, Idea Or Just Want To Say Hello —<br />
-                      Reach Out, We'd Love To Chat With You.
+                      Reach Out, We&apos;d Love To Chat With You.
                     </p>
 
                     <div className="space-y-4">
