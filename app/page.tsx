@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useRef, useState } from "react";
 import Navbar from "@/components/navbar/page";
 import Footer from "@/components/footer/page";
 import { motion, useInView } from "framer-motion";
