@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Users, Shield, BarChart3, FileText } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import Navbar from "@/components/navbar/page";
 import Footer from "@/components/footer/page";
@@ -136,33 +135,6 @@ export default function HomePage() {
       }, 500);
     }, 250);
   };
-
-  const features = [
-    {
-      icon: <FileText className="w-6 h-6" />,
-      title: "Document Automation",
-      description:
-        "Generate legal documents automatically with smart templates and data integration.",
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Client Management",
-      description:
-        "Comprehensive client portal with communication tools and case tracking.",
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Analytics & Reporting",
-      description:
-        "Detailed insights into case progress, billing, and firm performance metrics.",
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Security & Compliance",
-      description:
-        "Bank-level security with full compliance to legal industry standards.",
-    },
-  ];
 
   return (
     <div className="min-h-screen  text-white relative overflow-hidden">

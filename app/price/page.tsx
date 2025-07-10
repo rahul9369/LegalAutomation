@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Link from "next/link";
 import Navbar from "@/components/navbar/page";
 import Footer from "@/components/footer/page";
 
