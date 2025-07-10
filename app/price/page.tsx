@@ -1,9 +1,21 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Navbar from "@/components/navbar/page";
 import Footer from "@/components/footer/page";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function PricingPage() {
+  // Create refs for scroll-triggered animations
+  const heroRef = useRef(null);
+  const pricingRef = useRef(null);
+
+  // Use useInView for each section
+  const isHeroInView = useInView(heroRef, { once: true, amount: 0.3 });
+  const isPricingInView = useInView(pricingRef, { once: true, amount: 0.3 });
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#222a24] to-[#3e463c] text-white relative overflow-hidden">
       {/* Background Image */}
@@ -12,7 +24,12 @@ export default function PricingPage() {
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(62,70,60,0.3)_0%,rgba(34,42,36,1)_100%)] pointer-events-none z-10" />
       <div className="relative z-20">
         {/* Hero Section */}
-        <section className="container mx-auto px-4 py-16 lg:py-12">
+        <motion.section 
+          ref={heroRef}
+          className="container mx-auto px-4 py-16 lg:py-12"
+          initial={{ opacity: 0, y: 40 }}
+          animate={isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.8, delay: 0.1 }}>
           <div className="text-center space-y-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full border border-teal-600 text-teal-400 text-sm font-medium">
               PRICING PLANS
@@ -25,10 +42,15 @@ export default function PricingPage() {
               needs. Start free and upgrade as you grow.
             </p>
           </div>
-        </section>
+        </motion.section>
 
         {/* Pricing Section */}
-        <section className="container mx-auto px-4 py-20">
+        <motion.section 
+          ref={pricingRef}
+          className="container mx-auto px-4 py-20"
+          initial={{ opacity: 0, y: 40 }}
+          animate={isPricingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.8, delay: 0.2 }}>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Starter Plan */}
             <Card className="bg-gray-800/50 border border-gray-700 p-8 text-center hover:bg-gray-800/70 transition-colors group relative">
@@ -156,7 +178,7 @@ export default function PricingPage() {
           </div>
 
           {/* FAQ Section */}
-        </section>
+        </motion.section>
 
         <Footer />
       </div>

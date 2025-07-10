@@ -1,18 +1,30 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/navbar/page";
 import Footer from "@/components/footer/page";
+import { motion, useInView } from "framer-motion";
 
 export default function SignupPage() {
   const [accountType, setAccountType] = useState("Law Firm");
+
+  // Create refs for scroll-triggered animations
+  const formRef = useRef(null);
+
+  // Use useInView for the form section
+  const isFormInView = useInView(formRef, { once: true, amount: 0.3 });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#222a24] to-[#3e463c] text-white relative overflow-hidden">
       <Navbar />
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(62,70,60,0.3)_0%,rgba(34,42,36,1)_100%)] pointer-events-none" />
-      <div className="relative z-10 w-full max-w-xl mx-auto bg-[#222a24]/80 rounded-2xl shadow-2xl p-8 border border-gray-700 mt-8">
+      <motion.div 
+        ref={formRef}
+        className="relative z-10 w-full max-w-xl mx-auto bg-[#222a24]/80 rounded-2xl shadow-2xl p-8 border border-gray-700 mt-8"
+        initial={{ opacity: 0, y: 40 }}
+        animate={isFormInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+        transition={{ duration: 0.8, delay: 0.1 }}>
         {/* Tabs */}
         <div className="flex mb-8 rounded-lg overflow-hidden border border-gray-700">
           <Link href="/login" className="w-1/2 text-center py-3 font-semibold transition-colors bg-transparent hover:bg-[#006261]/30 text-gray-300 hover:text-teal-400 focus:outline-none focus:bg-[#006261]/40">
@@ -47,7 +59,7 @@ export default function SignupPage() {
           </div>
           <Button className="w-full bg-gradient-to-r from-[#006261] to-[#01B879] hover:opacity-90 text-white py-3 rounded-lg text-lg font-semibold transition-colors mt-2">Log In To CLAW</Button>
         </form>
-      </div>
+      </motion.div>
       <Footer />
     </div>
   );

@@ -1,16 +1,33 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Globe, Instagram, Linkedin, Youtube } from "lucide-react";
 import Navbar from "@/components/navbar/page";
 import Footer from "@/components/footer/page";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function ContactPage() {
+  // Create refs for scroll-triggered animations
+  const heroRef = useRef(null);
+  const contentRef = useRef(null);
+
+  // Use useInView for each section
+  const isHeroInView = useInView(heroRef, { once: true, amount: 0.3 });
+  const isContentInView = useInView(contentRef, { once: true, amount: 0.3 });
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#222a24] to-[#3e463c] text-white relative overflow-hidden">
       <Navbar />
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(62,70,60,0.3)_0%,rgba(34,42,36,1)_100%)] pointer-events-none" />
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="relative z-10 text-center py-12 px-6">
+        <motion.section 
+          ref={heroRef}
+          className="relative z-10 text-center py-12 px-6"
+          initial={{ opacity: 0, y: 40 }}
+          animate={isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.8, delay: 0.1 }}>
           <div className="max-w-4xl mx-auto">
             {/* <p className="text-sm text-gray-400 mb-4">CONTACT US</p> */}
             <h1
@@ -22,10 +39,15 @@ export default function ContactPage() {
               You Excel in Your Legal Space
             </h1>
           </div>
-        </section>
+        </motion.section>
 
         {/* Main Content */}
-        <section className="relative z-10 px-6 pb-12">
+        <motion.section 
+          ref={contentRef}
+          className="relative z-10 px-6 pb-12"
+          initial={{ opacity: 0, y: 40 }}
+          animate={isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.8, delay: 0.2 }}>
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-gray-700">
               <div className="grid md:grid-cols-2 gap-12">
@@ -147,7 +169,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
         <Footer />
       </div>
     </div>
