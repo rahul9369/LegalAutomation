@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Users, Shield, BarChart3, FileText } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import Navbar from "@/components/navbar/page";
