@@ -17,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="rounded-full   border-gray-800 sticky top-0 bg-[rgba(33,33,33,0.6)] backdrop-blur-sm z-50">
+    <header className="sm:rounded-full   border-gray-800 sticky top-0 bg-[rgba(33,33,33,0.6)] backdrop-blur-sm z-50">
       <div className="container  mx-auto px-4 py-4">
         <nav className="flex  items-center justify-between">
           <div className="text-2xl font-bold text-white">CLAW</div>
@@ -60,29 +60,23 @@ export default function Navbar() {
         </nav>
         {/* Mobile Dropdown Menu */}
         {menuOpen && (
-          <div className="md:hidden mt-4 bg-[#232a24] rounded-lg shadow-lg py-4 px-6 flex flex-col gap-4 animate-fade-in">
+          <div className="md:hidden mt-4 bg-[#232a24]  shadow-lg py-4 px-6 flex flex-col gap-4 animate-fade-in">
             <button
               className="text-left text-teal-400 hover:text-teal-300 transition-colors"
-              onClick={() => handleNav("/")}
-            >
+              onClick={() => handleNav("/")}>
               Home
             </button>
             <button
               className="text-left text-gray-300 hover:text-white transition-colors"
-              onClick={() => handleNav("/price")}
-            >
+              onClick={() => handleNav("/price")}>
               Pricing
             </button>
             <button
               className="text-left hover:text-teal-400 transition-colors"
-              onClick={() => handleNav("/contact")}
-            >
+              onClick={() => handleNav("/contact")}>
               Contact
             </button>
-            <button
-              onClick={() => handleNav("/login")}
-              className="w-full"
-            >
+            <button onClick={() => handleNav("/login")} className="w-full">
               <Button className="bg-teal-600 hover:bg-teal-700 text-white w-full transition-colors">
                 Get Started
               </Button>
