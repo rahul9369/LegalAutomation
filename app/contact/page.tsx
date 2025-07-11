@@ -18,11 +18,14 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#222a24] to-[#3e463c] text-white relative overflow-hidden">
-      <Navbar />
+      <div className="absolute inset-0 z-0 bg-[url('/mark.png')] bg-cover bg-center opacity-100" />
+      <div className="rounded-xl w-[90%] mx-auto pt-10">
+        <Navbar />
+      </div>
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(62,70,60,0.3)_0%,rgba(34,42,36,1)_100%)] pointer-events-none" />
       <div className="relative z-10">
         {/* Hero Section */}
-        <motion.section 
+        <motion.section
           ref={heroRef}
           className="relative z-10 text-center py-12 px-6"
           initial={{ opacity: 0, y: 40 }}
@@ -42,11 +45,13 @@ export default function ContactPage() {
         </motion.section>
 
         {/* Main Content */}
-        <motion.section 
+        <motion.section
           ref={contentRef}
           className="relative z-10 px-6 pb-12"
           initial={{ opacity: 0, y: 40 }}
-          animate={isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          animate={
+            isContentInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
+          }
           transition={{ duration: 0.8, delay: 0.2 }}>
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-gray-700">
@@ -69,7 +74,7 @@ export default function ContactPage() {
 
                     <div className="space-y-4">
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center">
+                        <div className="w-10 h-10 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center">
                           <Phone className="w-5 h-5 text-teal-400" />
                         </div>
                         <span
@@ -80,7 +85,7 @@ export default function ContactPage() {
                       </div>
 
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center">
+                        <div className="w-10 h-10 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center">
                           <Mail className="w-5 h-5 text-teal-400" />
                         </div>
                         <span
@@ -91,7 +96,7 @@ export default function ContactPage() {
                       </div>
 
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center">
+                        <div className="w-10 h-10 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center">
                           <Globe className="w-5 h-5 text-teal-400" />
                         </div>
                         <span
@@ -103,13 +108,17 @@ export default function ContactPage() {
                     </div>
 
                     <div className="flex space-x-4 pt-4">
-                      <div className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer">
+                      <div
+                        className="w-10 h-10 bg-[rgba(62, 70, 60, 1)] rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer"
+                        style={{
+                          boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 0.2)",
+                        }}>
                         <Instagram className="w-5 h-5 text-gray-400" />
                       </div>
-                      <div className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer">
+                      <div className="w-10 h-10 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer">
                         <Linkedin className="w-5 h-5 text-gray-400" />
                       </div>
-                      <div className="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer">
+                      <div className="w-10 h-10 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer">
                         <Youtube className="w-5 h-5 text-gray-400" />
                       </div>
                     </div>
@@ -117,7 +126,11 @@ export default function ContactPage() {
                 </div>
 
                 {/* Right Side - Contact Form */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-gray-600">
+                <div
+                  className="bg-[rgba(62, 70, 60, 0.5)] backdrop-blur-sm rounded-xl p-8 border border-gray-600"
+                  style={{
+                    boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 0.5)",
+                  }}>
                   <h3 className="text-xl font-semibold mb-6 text-center">
                     Please Fill Out The Form
                   </h3>

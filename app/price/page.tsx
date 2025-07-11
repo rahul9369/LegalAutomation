@@ -20,11 +20,13 @@ export default function PricingPage() {
     <div className="min-h-screen bg-gradient-to-br from-[#222a24] to-[#3e463c] text-white relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 bg-[url('/mark.png')] bg-cover bg-center opacity-100" />
-      <Navbar />
+      <div className="rounded-xl w-[90%] mx-auto pt-10">
+        <Navbar />
+      </div>
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(62,70,60,0.3)_0%,rgba(34,42,36,1)_100%)] pointer-events-none z-10" />
       <div className="relative z-20">
         {/* Hero Section */}
-        <motion.section 
+        <motion.section
           ref={heroRef}
           className="container mx-auto px-4 py-16 lg:py-12"
           initial={{ opacity: 0, y: 40 }}
@@ -38,22 +40,26 @@ export default function PricingPage() {
               Choose The Perfect Plan For Your Practice
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your law firm&apos;s
-              needs. Start free and upgrade as you grow.
+              Flexible pricing options designed to scale with your law
+              firm&apos;s needs. Start free and upgrade as you grow.
             </p>
           </div>
         </motion.section>
 
         {/* Pricing Section */}
-        <motion.section 
+        <motion.section
           ref={pricingRef}
           className="container mx-auto px-4 py-20"
           initial={{ opacity: 0, y: 40 }}
-          animate={isPricingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          animate={
+            isPricingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
+          }
           transition={{ duration: 0.8, delay: 0.2 }}>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Starter Plan */}
-            <Card className="bg-gray-800/50 border border-gray-700 p-8 text-center hover:bg-gray-800/70 transition-colors group relative">
+            <Card
+              className="bg-[rgba(62, 70, 60, 0.5)] transform backdrop-blur-md hover:scale-105 border border-gray-700 p-8 text-center  transition-colors group relative"
+              style={{ boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 1)" }}>
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-white mb-2">Starter</h3>
                 <p className="text-gray-400 text-sm">
@@ -90,7 +96,9 @@ export default function PricingPage() {
             </Card>
 
             {/* Professional Plan */}
-            <Card className="bg-gradient-to-br from-teal-600 to-teal-700 border border-teal-500 p-8 text-center hover:from-teal-700 hover:to-teal-800 transition-all duration-300 group relative transform hover:scale-105">
+            <Card
+              className="bg-[rgba(62, 70, 60, 0.5)] backdrop-blur-md border border-teal-500 p-8 text-center  transition-all duration-300 group relative transform hover:scale-105"
+              style={{ boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 1)" }}>
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <div className="bg-teal-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
                   MOST POPULAR
@@ -136,7 +144,9 @@ export default function PricingPage() {
             </Card>
 
             {/* Enterprise Plan */}
-            <Card className="bg-gray-800/50 border border-gray-700 p-8 text-center hover:bg-gray-800/70 transition-colors group relative">
+            <Card
+              className="bg-[rgba(62, 70, 60, 0.5)]  backdrop-blur-md  transform hover:scale-105 border border-gray-700 p-8 text-center  transition-colors group relative"
+              style={{ boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 1)" }}>
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-white mb-2">
                   Enterprise
@@ -171,7 +181,7 @@ export default function PricingPage() {
                   Advanced security features
                 </li>
               </ul>
-              <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-lg font-semibold transition-colors">
+              <Button className="w-full  bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-lg font-semibold transition-colors">
                 Contact Sales
               </Button>
             </Card>

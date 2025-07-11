@@ -153,9 +153,11 @@ export default function HomePage() {
   const isDatabaseInView = useInView(databaseRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="min-h-screen  text-white relative overflow-hidden">
-      <div className="w-7xl mx-auto">
-        <Navbar />
+    <div className="min-h-screen text-white relative overflow-hidden flex flex-col">
+      <div className="w-7xl mx-auto flex-1">
+        <div className="rounded-xl pt-10">
+          <Navbar />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#222a24] to-[#3e463c] pointer-events-none" />
         <div className="relative z-10">
           {/* Hero Section */}
@@ -197,12 +199,12 @@ export default function HomePage() {
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-gradient-to-r from-[#006261] to-[#01B879] hover:opacity-90 text-white px-8 py-3 text-lg">
+                  <Button className="bg-gradient-to-r from-[#006261] to-[#01B879] hover:opacity-90 text-white px-8 py-3 text-md">
                     Get Started
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-gray-600 text-white hover:bg-gray-800 px-8 py-3 text-lg bg-transparent">
+                    className="border-gray-600 text-white hover:bg-gray-800 px-8 py-3 text-md bg-transparent">
                     Download App
                   </Button>
                 </div>
@@ -277,17 +279,17 @@ export default function HomePage() {
           {/* Elevate Your Practice Section */}
           <motion.section
             ref={elevateRef}
-            className="container mx-auto bg-[#3E463C]/20 px-4 py-28"
+            className="container rounded-xl border-1 mx-auto bg-[#3E463C]/20 px-4 py-28"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isElevateInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
             }
             transition={{ duration: 0.8, delay: 0.3 }}>
-            <div className="text-center mb-16">
+            <div className="text-center  mb-16">
               <p className="text-teal-400 text-sm uppercase tracking-wider mb-4">
                 FOR LAWYERS AND LAW FIRMS AROUND THE GLOBE
               </p>
-              <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+              <h2 className="text-xl lg:text-3xl font-bold mb-6">
                 Elevate Your Practice With Unmatched Features
               </h2>
             </div>
@@ -295,7 +297,10 @@ export default function HomePage() {
               {Array.from({ length: 6 }).map((_, index) => (
                 <Card
                   key={index}
-                  className="bg-[rgba(33, 33, 33, 1)] border-[#3E463C] cursor-pointer p-8 text-center  transition-colors group relative shadow-inner">
+                  className="bg-[rgba(33, 33, 33, 1)] border-[#3E463C] cursor-pointer p-8 text-center  transition-colors group relative shadow-inner"
+                  style={{
+                    boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 1)",
+                  }}>
                   <div className="mb-6 flex justify-center">
                     <div className="w-24 h-24 border-dotted border-2 border-gray-600 rounded-full flex items-center justify-center group-hover:bg-teal-600/20 transition-colors">
                       <Image
@@ -330,10 +335,10 @@ export default function HomePage() {
             }
             transition={{ duration: 0.8, delay: 0.4 }}>
             <div className="text-center mb-16">
-              <div className="inline-flex items-center px-4 py-2 rounded-full border border-teal-600 text-teal-400 text-sm font-medium mb-4">
+              <div className="inline-flex items-center px-4 py-2  text-teal-400 text-sm font-medium mb-4">
                 WHY CHOOSE CLAW
               </div>
-              <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+              <h2 className="text-xl lg:text-3xl font-bold mb-6">
                 What Sets Us Apart in The Legal Tech Landscape?
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -377,10 +382,10 @@ export default function HomePage() {
             <div className="relative pt-4 ">
               <div>
                 <div className="text-center  mb-16">
-                  <div className="inline-flex items-center px-4 py-2 rounded-full border border-teal-600 text-teal-400 text-sm font-medium mb-4">
+                  <div className="inline-flex items-center px-4 py-2  text-teal-400 text-sm font-medium mb-4">
                     HOW TO USE CLAW
                   </div>
-                  <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+                  <h2 className="text-xl lg:text-3xl font-bold mb-6">
                     {"Let&apos;s"} Go Through Some Steps For Using The App
                   </h2>
                   <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -464,7 +469,7 @@ export default function HomePage() {
             }
             transition={{ duration: 0.8, delay: 0.6 }}>
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-5xl font-bold mb-6">
+              <h2 className="text-xl lg:text-3xl font-bold mb-6">
                 This Is What Our Legal Database Looks Like
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -473,11 +478,11 @@ export default function HomePage() {
                 latest legal information.
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 ">
               {databaseStats.map((stat, index) => (
                 <Card
                   key={index}
-                  className=" p-8 text-center  transition-colors group">
+                  className=" p-8 text-center border-none  transition-colors group">
                   <div className="text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent mb-4">
                     {stat.number}
                   </div>
@@ -492,8 +497,8 @@ export default function HomePage() {
             </div>
           </motion.section>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
