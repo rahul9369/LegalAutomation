@@ -164,7 +164,7 @@ export default function HomePage() {
           <motion.section
             ref={heroRef}
             id="home"
-            className="relative w-full px-4 py-10 sm:py-16 overflow-hidden"
+            className="relative w-full mx-auto pl-16 py-10 sm:py-16 overflow-hidden"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
