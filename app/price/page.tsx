@@ -28,18 +28,18 @@ export default function PricingPage() {
         {/* Hero Section */}
         <motion.section
           ref={heroRef}
-          className="container mx-auto px-4 py-16 lg:py-12"
+          className="container mx-auto px-4 py-4 lg:py-12"
           initial={{ opacity: 0, y: 40 }}
           animate={isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.8, delay: 0.1 }}>
           <div className="text-center space-y-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full border border-teal-600 text-teal-400 text-sm font-medium">
+            <div className="inline-flex items-center px-4 py-2  text-teal-400 text-sm font-medium">
               PRICING PLANS
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
+            <h1 className="text-lg lg:text-3xl font-bold leading-tight">
               Choose The Perfect Plan For Your Practice
             </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="sm:text-xl text-md text-gray-400 max-w-2xl mx-auto">
               Flexible pricing options designed to scale with your law
               firm&apos;s needs. Start free and upgrade as you grow.
             </p>
@@ -49,7 +49,7 @@ export default function PricingPage() {
         {/* Pricing Section */}
         <motion.section
           ref={pricingRef}
-          className="container mx-auto px-4 py-20"
+          className="container mx-auto px-4 py-5 sm:py-20"
           initial={{ opacity: 0, y: 40 }}
           animate={
             isPricingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -186,8 +186,6 @@ export default function PricingPage() {
               </Button>
             </Card>
           </div>
-
-          {/* FAQ Section */}
         </motion.section>
 
         <Footer />

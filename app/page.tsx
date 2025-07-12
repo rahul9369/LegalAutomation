@@ -155,7 +155,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen text-white relative overflow-x-hidden flex flex-col">
       <div className="max-w-7xl w-full mx-auto flex-1">
-        <div className="rounded-xl pt-10">
+        <div className="rounded-xl w-[90%] mx-auto pt-10">
           <Navbar />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#222a24] to-[#3e463c] pointer-events-none" />
@@ -227,7 +227,7 @@ export default function HomePage() {
           {/* Trusted Experts Section */}
           <motion.section
             ref={trustedRef}
-            className="w-full px-4 py-10 sm:py-20"
+            className="w-[90%] max-w-7xl px-4 py-10 sm:py-20"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isTrustedInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -242,34 +242,50 @@ export default function HomePage() {
                   Your Trusted Ally For Leading Legal Experts
                 </h2>
                 <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
-                  Join thousands of legal professionals who trust CLAW to enhance
-                  their practice and deliver exceptional client service.
+                  Join thousands of legal professionals who trust CLAW to
+                  enhance their practice and deliver exceptional client service.
                 </p>
               </div>
               {/* Expert Cards Grid */}
-              <div className="overflow-x-auto space-y-4 sm:space-y-6">
+              <div className="w-[90%] space-y-4 sm:space-y-6">
                 {/* Row 1 - Right to Left */}
                 <div className="flex gap-3 sm:gap-4 animate-scroll-left min-w-[480px] sm:min-w-0">
                   {Array.from({ length: 10 }).map((_, index) => (
-                    <Card
+                    <motion.div
                       key={`top-${index}`}
-                      className="bg-gray-800/50 border border-gray-700 aspect-square p-3 sm:p-6 flex items-center justify-center hover:bg-gray-800/70 transition-colors group min-w-[100px] sm:min-w-[150px] flex-shrink-0">
-                      <div className="w-full h-full bg-gray-700 rounded-lg flex items-center justify-center group-hover:bg-gray-600 transition-colors">
-                        <div className="w-10 h-8 sm:w-20 sm:h-12 bg-gray-600 rounded-full group-hover:bg-teal-600 transition-colors" />
-                      </div>
-                    </Card>
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={
+                        isTrustedInView
+                          ? { opacity: 1, y: 0 }
+                          : { opacity: 0, y: 20 }
+                      }
+                      transition={{ duration: 0.5, delay: index * 0.1 }}>
+                      <Card className="bg-gray-800/50 border border-gray-700 aspect-square p-3 sm:p-6 flex items-center justify-center hover:bg-gray-800/70 transition-colors group min-w-[100px] sm:min-w-[150px] flex-shrink-0">
+                        <div className="w-full h-full bg-gray-700 rounded-lg flex items-center justify-center group-hover:bg-gray-600 transition-colors">
+                          <div className="w-10 h-8 sm:w-20 sm:h-12 bg-gray-600 rounded-full group-hover:bg-teal-600 transition-colors" />
+                        </div>
+                      </Card>
+                    </motion.div>
                   ))}
                 </div>
                 {/* Row 2 - Left to Right */}
                 <div className="flex gap-3 sm:gap-4 animate-scroll-right min-w-[480px] sm:min-w-0">
                   {Array.from({ length: 10 }).map((_, index) => (
-                    <Card
+                    <motion.div
                       key={`bottom-${index}`}
-                      className="bg-gray-800/50 border border-gray-700 aspect-square p-3 sm:p-6 flex items-center justify-center hover:bg-gray-800/70 transition-colors group min-w-[100px] sm:min-w-[150px] flex-shrink-0">
-                      <div className="w-full h-full bg-gray-700 rounded-lg flex items-center justify-center group-hover:bg-gray-600 transition-colors">
-                        <div className="w-8 h-8 sm:w-12 sm:h-12 bg-gray-600 rounded-full group-hover:bg-teal-600 transition-colors" />
-                      </div>
-                    </Card>
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={
+                        isTrustedInView
+                          ? { opacity: 1, y: 0 }
+                          : { opacity: 0, y: 20 }
+                      }
+                      transition={{ duration: 0.5, delay: (index + 10) * 0.1 }}>
+                      <Card className="bg-gray-800/50 border border-gray-700 aspect-square p-3 sm:p-6 flex items-center justify-center hover:bg-gray-800/70 transition-colors group min-w-[100px] sm:min-w-[150px] flex-shrink-0">
+                        <div className="w-full h-full bg-gray-700 rounded-lg flex items-center justify-center group-hover:bg-gray-600 transition-colors">
+                          <div className="w-8 h-8 sm:w-12 sm:h-12 bg-gray-600 rounded-full group-hover:bg-teal-600 transition-colors" />
+                        </div>
+                      </Card>
+                    </motion.div>
                   ))}
                 </div>
               </div>
@@ -279,7 +295,7 @@ export default function HomePage() {
           {/* Elevate Your Practice Section */}
           <motion.section
             ref={elevateRef}
-            className="w-full rounded-xl border-1 mx-auto bg-[#3E463C]/20 px-4 py-10 sm:py-28"
+            className="w-[90%] rounded-xl border-1 mx-auto bg-[#3E463C]/20 px-4 py-10 sm:py-10"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isElevateInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -295,31 +311,40 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 max-w-6xl mx-auto">
               {Array.from({ length: 6 }).map((_, index) => (
-                <Card
+                <motion.div
                   key={index}
-                  className="bg-[rgba(33, 33, 33, 1)] border-[#3E463C] cursor-pointer p-4 sm:p-8 text-center  transition-colors group relative shadow-inner"
-                  style={{
-                    boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 1)",
-                  }}>
-                  <div className="mb-3 sm:mb-6 flex justify-center">
-                    <div className="w-16 h-16 sm:w-24 sm:h-24 border-dotted border-2 border-gray-600 rounded-full flex items-center justify-center group-hover:bg-teal-600/20 transition-colors">
-                      <Image
-                        src="/head.png"
-                        alt="Feature Icon"
-                        width={60}
-                        height={60}
-                        className="rounded-full"
-                      />
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={
+                    isElevateInView
+                      ? { opacity: 1, y: 0 }
+                      : { opacity: 0, y: 30 }
+                  }
+                  transition={{ duration: 0.6, delay: index * 0.1 }}>
+                  <Card
+                    className="bg-[rgba(33, 33, 33, 1)] border-[#3E463C] cursor-pointer p-4 sm:p-8 text-center  transition-colors group relative shadow-inner hover:scale-105"
+                    style={{
+                      boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 1)",
+                    }}>
+                    <div className="mb-3 sm:mb-6 flex justify-center">
+                      <div className="w-16 h-16 sm:w-24 sm:h-24 border-dotted border-2 border-gray-600 rounded-full flex items-center justify-center group-hover:bg-teal-600/20 transition-colors">
+                        <Image
+                          src="/head.png"
+                          alt="Feature Icon"
+                          width={60}
+                          height={60}
+                          className="rounded-full"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <h3 className="text-sm sm:text-xl font-semibold text-white mb-2 sm:mb-4">
-                    Streamlining Your Legal Workflow
-                  </h3>
-                  <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-                    Experience Seamless Integration Of Tools Designed To Enhance
-                    Your Legal Practice.
-                  </p>
-                </Card>
+                    <h3 className="text-sm sm:text-xl font-semibold text-white mb-2 sm:mb-4">
+                      Streamlining Your Legal Workflow
+                    </h3>
+                    <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                      Experience Seamless Integration Of Tools Designed To
+                      Enhance Your Legal Practice.
+                    </p>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </motion.section>
@@ -349,23 +374,32 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 sm:gap-4">
               {stats.map((stat, index) => (
-                <Card
+                <motion.div
                   key={index}
-                  className={` border-none p-4 sm:p-16 text-center  transition-colors group ${
-                    index < 2
-                      ? "border-b border-white/10"
-                      : "border-t border-white/10"
-                  }`}>
-                  <div className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent mb-2 sm:mb-4">
-                    {stat.number}
-                  </div>
-                  <h3 className="text-xs sm:text-lg font-semibold text-white mb-2 sm:mb-4">
-                    {stat.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                    {stat.description}
-                  </p>
-                </Card>
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={
+                    isFeaturesInView
+                      ? { opacity: 1, y: 0 }
+                      : { opacity: 0, y: 30 }
+                  }
+                  transition={{ duration: 0.6, delay: index * 0.15 }}>
+                  <Card
+                    className={` border-none p-4 sm:p-16 text-center  transition-colors group hover:scale-105 ${
+                      index < 2
+                        ? "border-b border-white/10"
+                        : "border-t border-white/10"
+                    }`}>
+                    <div className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent mb-2 sm:mb-4">
+                      {stat.number}
+                    </div>
+                    <h3 className="text-xs sm:text-lg font-semibold text-white mb-2 sm:mb-4">
+                      {stat.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                      {stat.description}
+                    </p>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </motion.section>
@@ -396,7 +430,7 @@ export default function HomePage() {
 
                 {/* Step Navigation */}
                 <div className="flex w-full z-10 justify-center mb-6 sm:mb-16">
-                  <div className="flex flex-wrap w-full sm:w-[90%] justify-center gap-2 bg-gray-800/50 rounded-xl p-1 sm:p-2">
+                  <div className="sm:flex grid grid-cols-2  w-full sm:w-[90%] justify-center gap-2 bg-gray-800/50 rounded-xl p-1 sm:p-2">
                     {steps.map((step, index) => (
                       <button
                         key={index}
@@ -480,19 +514,27 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
               {databaseStats.map((stat, index) => (
-                <Card
+                <motion.div
                   key={index}
-                  className="p-4 sm:p-8 text-center border-none transition-colors group">
-                  <div className="text-lg sm:text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent mb-2 sm:mb-4">
-                    {stat.number}
-                  </div>
-                  <h3 className="text-xs sm:text-lg font-semibold text-white mb-2 sm:mb-4">
-                    {stat.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                    {stat.description}
-                  </p>
-                </Card>
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={
+                    isDatabaseInView
+                      ? { opacity: 1, y: 0 }
+                      : { opacity: 0, y: 30 }
+                  }
+                  transition={{ duration: 0.6, delay: index * 0.1 }}>
+                  <Card className="p-4 sm:p-8 text-center border-none transition-colors group hover:scale-105">
+                    <div className="text-lg sm:text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent mb-2 sm:mb-4">
+                      {stat.number}
+                    </div>
+                    <h3 className="text-xs sm:text-lg font-semibold text-white mb-2 sm:mb-4">
+                      {stat.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                      {stat.description}
+                    </p>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </motion.section>
