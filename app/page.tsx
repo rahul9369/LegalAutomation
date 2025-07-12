@@ -227,7 +227,7 @@ export default function HomePage() {
           {/* Trusted Experts Section */}
           <motion.section
             ref={trustedRef}
-            className="w-[90%] max-w-7xl px-4 py-10 sm:py-20"
+            className="w-[90%]  mx-auto  max-w-7xl px-4 py-10 sm:py-20"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isTrustedInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -247,7 +247,7 @@ export default function HomePage() {
                 </p>
               </div>
               {/* Expert Cards Grid */}
-              <div className="w-[90%] space-y-4 sm:space-y-6">
+              <div className="overflow-x-hidden space-y-4 sm:space-y-6">
                 {/* Row 1 - Right to Left */}
                 <div className="flex gap-3 sm:gap-4 animate-scroll-left min-w-[480px] sm:min-w-0">
                   {Array.from({ length: 10 }).map((_, index) => (
