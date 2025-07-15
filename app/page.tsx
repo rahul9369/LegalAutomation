@@ -153,18 +153,18 @@ export default function HomePage() {
   const isDatabaseInView = useInView(databaseRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="min-h-screen text-white relative overflow-x-hidden flex flex-col">
-      <div className="max-w-7xl w-full mx-auto flex-1">
+    <div className="min-h-screen pt-10 text-white relative overflow-x-hidden flex flex-col">
+      <div className="max-w-9xl w-full mx-auto flex-1">
         <div className="rounded-xl w-[90%] mx-auto pt-10">
           <Navbar />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#222a24] to-[#3e463c] pointer-events-none" />
-        <div className="relative z-10">
+        <div className="relative  z-10">
           {/* Hero Section */}
           <motion.section
             ref={heroRef}
             id="home"
-            className="relative w-full mx-auto sm:pl-16 py-10 sm:py-16 overflow-hidden"
+            className="relative w-[90%] sm:w-full mx-auto sm:pl-24 py-10 sm:py-16 overflow-hidden"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -185,14 +185,14 @@ export default function HomePage() {
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center min-w-0">
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                  <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight">
                     Your All-In-One
                     <br />
-                    <span className="text-xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent">
+                    <span className="text-xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent">
                       Legal Automation App
                     </span>
                   </h1>
-                  <p className="text-gray-400 text-base sm:text-lg max-w-md">
+                  <p className="text-gray-400 text-base sm:text-xl max-w-md">
                     Simplify your legal procedures with our revolutionary
                     platform, built to save your time, minimise complexity, and
                     raise your practice.
@@ -215,8 +215,8 @@ export default function HomePage() {
                   <Image
                     src="/iPhone15Pro.png"
                     alt="iPhone 15 Pro Mockup"
-                    width={600}
-                    height={600}
+                    width={900}
+                    height={900}
                     className="w-full h-auto"
                   />
                 </div>
@@ -260,9 +260,9 @@ export default function HomePage() {
                           : { opacity: 0, y: 20 }
                       }
                       transition={{ duration: 0.5, delay: index * 0.1 }}>
-                      <Card className="bg-gray-800/50 border border-gray-700 aspect-square p-3 sm:p-6 flex items-center justify-center hover:bg-gray-800/70 transition-colors group min-w-[100px] sm:min-w-[150px] flex-shrink-0">
-                        <div className="w-full h-full bg-gray-700 rounded-lg flex items-center justify-center group-hover:bg-gray-600 transition-colors">
-                          <div className="w-10 h-8 sm:w-20 sm:h-12 bg-gray-600 rounded-full group-hover:bg-teal-600 transition-colors" />
+                      <Card className="bg-gray-800/50 border border-gray-700 aspect-square p-3 sm:p-2 flex items-center justify-center hover:bg-gray-200/10 transition-colors group min-w-[100px] sm:min-w-[200px] h-32 flex-shrink-0">
+                        <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center group-hover:bg-gray-100 transition-colors">
+                          {/* <div className="w-10 h-8 sm:w-20 sm:h-12 bg-gray-600 rounded-full group-hover:bg-teal-600 transition-colors" /> */}
                         </div>
                       </Card>
                     </motion.div>
@@ -280,9 +280,9 @@ export default function HomePage() {
                           : { opacity: 0, y: 20 }
                       }
                       transition={{ duration: 0.5, delay: (index + 10) * 0.1 }}>
-                      <Card className="bg-gray-800/50 border border-gray-700 aspect-square p-3 sm:p-6 flex items-center justify-center hover:bg-gray-800/70 transition-colors group min-w-[100px] sm:min-w-[150px] flex-shrink-0">
-                        <div className="w-full h-full bg-gray-700 rounded-lg flex items-center justify-center group-hover:bg-gray-600 transition-colors">
-                          <div className="w-8 h-8 sm:w-12 sm:h-12 bg-gray-600 rounded-full group-hover:bg-teal-600 transition-colors" />
+                      <Card className="bg-gray-800/50 border border-gray-700 aspect-square p-3 sm:p-2 flex items-center justify-center hover:bg-gray-200/10 transition-colors group min-w-[100px] sm:min-w-[200px] h-32 flex-shrink-0">
+                        <div className="w-full h-full bg-white rounded-lg flex items-center justify-center group-hover:bg-gray-100 transition-colors">
+                          {/* <div className="w-8 h-8 sm:w-12 sm:h-12 bg-gray-600 rounded-full group-hover:bg-teal-600 transition-colors" /> */}
                         </div>
                       </Card>
                     </motion.div>
@@ -295,7 +295,7 @@ export default function HomePage() {
           {/* Elevate Your Practice Section */}
           <motion.section
             ref={elevateRef}
-            className="w-[90%] rounded-xl border-1 mx-auto bg-[#3E463C]/20 px-4 py-10 sm:py-10"
+            className="w-[85%] rounded-xl border-1 border-white/10 mx-auto bg-[#3E463C]/20 px-4 py-10 sm:py-10"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isElevateInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -353,7 +353,7 @@ export default function HomePage() {
           <motion.section
             ref={featuresRef}
             id="features"
-            className="w-full bg-[rgba(33, 33, 33, 1)] mx-auto px-4 py-10 sm:py-20"
+            className="w-[85%] bg-[rgba(33, 33, 33, 1)] mx-auto px-4 py-10 sm:py-20"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isFeaturesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -372,7 +372,7 @@ export default function HomePage() {
                 sizes.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 sm:gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -384,10 +384,18 @@ export default function HomePage() {
                   }
                   transition={{ duration: 0.6, delay: index * 0.15 }}>
                   <Card
-                    className={` border-none p-4 sm:p-16 text-center  transition-colors group hover:scale-105 ${
-                      index < 2
-                        ? "border-b border-white/10"
-                        : "border-t border-white/10"
+                    className={`p-4 sm:p-16 rounded-none text-center cursor-pointer transition-colors group border-white/10 ${
+                      index < 2 ? "border-b" : "border-t"
+                    } ${
+                      index === 0
+                        ? "bg-[linear-gradient(315deg,_rgba(255,255,255,0.2)_10%,_rgba(255,255,255,0)_100%)]" // 1st: bottom-right
+                        : index === 1
+                        ? "bg-[linear-gradient(45deg,_rgba(255,255,255,0.2)_0%,_rgba(255,255,255,0)_100%)]" // 2nd: bottom-left
+                        : index === 2
+                        ? "bg-[linear-gradient(225deg,_rgba(255,255,255,0.2)_0%,_rgba(255,255,255,0)_100%)]" // 3rd: top-right
+                        : index === 3
+                        ? "bg-[linear-gradient(135deg,_rgba(255,255,255,0.2)_0%,_rgba(255,255,255,0)_100%)]" // 4th: top-left
+                        : "bg-transparent"
                     }`}>
                     <div className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent mb-2 sm:mb-4">
                       {stat.number}
@@ -407,7 +415,7 @@ export default function HomePage() {
           {/* App Steps Section */}
           <motion.section
             ref={stepsRef}
-            className="w-full mx-auto px-4 py-10 sm:py-20"
+            className="w-[90%] mx-auto px-4 py-10 sm:py-20"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isStepsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -430,14 +438,14 @@ export default function HomePage() {
 
                 {/* Step Navigation */}
                 <div className="flex w-full z-10 justify-center mb-6 sm:mb-16">
-                  <div className="sm:flex grid grid-cols-2  w-full sm:w-[90%] justify-center gap-2 bg-gray-800/50 rounded-xl p-1 sm:p-2">
+                  <div className="sm:flex  border-1 grid grid-cols-2  w-full sm:w-[95%] justify-center gap-2 bg-gray-800/50 rounded-xl p-1 sm:p-2">
                     {steps.map((step, index) => (
                       <button
                         key={index}
                         onClick={() => handleStepClick(step.id)}
-                        className={` flex-1 min-w-[80px] py-2 sm:py-3 z-10 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                        className={` flex-1  border-1 cursor-pointer min-w-[80px] py-2 sm:py-3 z-10 rounded-lg text-xs sm:text-sm font-medium transition-all ${
                           step.active
-                            ? "bg-teal-600 text-white shadow-lg"
+                            ? "bg-gradient-to-r  from-[#006261] to-[#01B879] text-white shadow-lg"
                             : "text-gray-400 hover:text-white hover:bg-gray-700/50"
                         }`}>
                         {step.label}
@@ -457,7 +465,7 @@ export default function HomePage() {
               </div>
             </div>
             {/* Dashboard Preview */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 border border-white/10 rounded-lg gap-4 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 bg-[rgba(33,33,33,0.8)] backdrop-blur-sm lg:grid-cols-2 border border-white/10 rounded-lg gap-4 lg:gap-16 items-center">
               <div
                 className={`flex justify-center transition-all duration-500 ${
                   isAnimating
@@ -496,7 +504,7 @@ export default function HomePage() {
           {/* Legal Database Section */}
           <motion.section
             ref={databaseRef}
-            className="w-full bg-[rgba(33, 33, 33, 1)] mx-auto px-4 py-10 sm:py-20"
+            className="w-[85%] bg-[rgba(33, 33, 33, 1)] mx-auto px-4 py-10 sm:py-20"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isDatabaseInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -512,7 +520,7 @@ export default function HomePage() {
                 latest legal information.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
               {databaseStats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -523,7 +531,13 @@ export default function HomePage() {
                       : { opacity: 0, y: 30 }
                   }
                   transition={{ duration: 0.6, delay: index * 0.1 }}>
-                  <Card className="p-4 sm:p-8 text-center border-none transition-colors group hover:scale-105">
+                  <Card
+                    className={`p-4 rounded-none sm:p-8 text-center border-none transition-transform transform group 
+        ${
+          index % 2 === 0
+            ? "bg-[linear-gradient(135deg,_rgba(255,255,255,0.1)_60%,_rgba(255,255,255,0.3)_110%)]" // even - bottom-left
+            : "bg-[linear-gradient(225deg,_rgba(255,255,255,0.1)_60%,_rgba(255,255,255,0.3)_110%)]" // odd - bottom-right
+        }`}>
                     <div className="text-lg sm:text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent mb-2 sm:mb-4">
                       {stat.number}
                     </div>

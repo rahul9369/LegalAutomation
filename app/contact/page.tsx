@@ -17,7 +17,7 @@ export default function ContactPage() {
   const isContentInView = useInView(contentRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#222a24] to-[#3e463c] text-white relative overflow-hidden">
+    <div className="min-h-screen pt-10 bg-gradient-to-br from-[#222a24] to-[#3e463c] text-white relative overflow-hidden">
       <div className="absolute inset-0 z-0 bg-[url('/mark.png')] bg-cover bg-center opacity-100" />
       <div className="rounded-xl w-[90%] mx-auto pt-10">
         <Navbar />
@@ -76,52 +76,42 @@ export default function ContactPage() {
 
                     <div className="space-y-1 sm:space-y-4">
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center">
-                          <Phone className="w-5 h-5 text-teal-400" />
+                        <div className="w-10 h-10 border-1 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center">
+                          <Phone className="w-5 h-5 text-[#01B679] " />
                         </div>
-                        <span
-                          className="bg-gradient-to-r from-[#006261] to-[#01B879] 
-               bg-clip-text text-transparent">
-                          +91 9316164924
-                        </span>
+                        <span className="text-[#01B679]">+91 9316164924</span>
                       </div>
 
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center">
-                          <Mail className="w-5 h-5 text-teal-400" />
+                        <div className="w-10 border-1 h-10 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center">
+                          <Mail className="w-5 h-5 text-[#01B679]" />
                         </div>
-                        <span
-                          className="bg-gradient-to-r from-[#006261] to-[#01B879] 
-               bg-clip-text text-transparent">
+                        <span className="text-[#01B679]">
                           claw.lawyers@gmail.com
                         </span>
                       </div>
 
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center">
-                          <Globe className="w-5 h-5 text-teal-400" />
+                        <div className="w-10 border-1 h-10 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center">
+                          <Globe className="w-5 h-5 text-[#01B679]" />
                         </div>
-                        <span
-                          className="bg-gradient-to-r from-[#006261] to-[#01B879] 
-               bg-clip-text text-transparent">
-                          www.clawlaw.in
-                        </span>
+                        <span className="text-[#01B679]">www.clawlaw.in</span>
                       </div>
                     </div>
 
                     <div className="flex space-y-1 sm:space-x-4 pt-4">
                       <div
-                        className="w-10 h-10 bg-[rgba(62, 70, 60, 1)] rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer"
+                        className="w-10 border-1 h-10 bg-[rgba(62, 70, 60, 1)] rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer"
                         style={{
                           boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 0.2)",
                         }}>
-                        <Instagram className="w-5 h-5 text-gray-400" />
+                        <Instagram className="w-5 h-5 text-orange-400" />
                       </div>
-                      <div className="w-10 h-10 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer">
-                        <Linkedin className="w-5 h-5 text-gray-400" />
+                      <div className="w-10 h-10 border-1 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer">
+                        <Linkedin className="w-5 h-5 text-blue-500" />
                       </div>
-                      <div className="w-10 h-10 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer">
-                        <Youtube className="w-5 h-5 text-gray-400" />
+                      <div className="w-10 h-10 border-1 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer">
+                        <Youtube className="w-5 h-5 text-red-400" />
                       </div>
                     </div>
                   </div>
@@ -129,7 +119,7 @@ export default function ContactPage() {
 
                 {/* Right Side - Contact Form */}
                 <div
-                  className="bg-[rgba(62, 70, 60, 0.5)] backdrop-blur-sm rounded-xl p-2 sm:p-8 border border-gray-600"
+                  className="bg-[rgba(62, 70, 60, 0.1)] backdrop-blur-sm rounded-xl p-2 sm:p-8 border border-gray-600"
                   style={{
                     boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 0.5)",
                   }}>
@@ -141,19 +131,19 @@ export default function ContactPage() {
                     <input
                       type="text"
                       placeholder="Enter Your Full Name"
-                      className="w-full bg-white/10 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3"
+                      className="w-full bg-white/1 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3"
                     />
 
                     <div className="grid grid-cols-2 gap-4">
                       <input
                         type="tel"
                         placeholder="Enter Your Phone Number"
-                        className="w-full bg-gray-200/10 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3"
+                        className="w-full bg-white/1 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3"
                       />
                       <input
                         type="email"
                         placeholder="Enter Your Email"
-                        className="w-full bg-white/10 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3"
+                        className="w-full bg-white/1 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3"
                       />
                     </div>
 
@@ -161,22 +151,22 @@ export default function ContactPage() {
                       <input
                         type="text"
                         placeholder="Last Name"
-                        className="w-full bg-white/10 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3"
+                        className="w-full bg-white/1 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3"
                       />
                       <input
                         type="text"
-                        placeholder="Enter Your Name Of Speciality"
-                        className="w-full bg-white/10 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3"
+                        placeholder="  Name Of Speciality"
+                        className="w-full bg-white/2 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3"
                       />
                     </div>
 
                     <textarea
                       placeholder="Enter Your Message"
                       rows={4}
-                      className="w-full bg-white/10 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3 resize-none"
+                      className="w-full bg-white/1 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3 resize-none"
                     />
 
-                    <Button className="w-full bg-teal-500 hover:bg-teal-600 text-white py-3 rounded-lg font-semibold transition-colors">
+                    <Button className="w-full bg-gradient-to-r from-[#006261] to-[#01B879] hover:bg-teal-600 text-white py-3 rounded-lg font-semibold transition-colors">
                       Send
                     </Button>
                   </form>

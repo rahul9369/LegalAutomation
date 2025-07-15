@@ -23,8 +23,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sm:rounded-full   border-gray-800 sticky top-0 bg-[rgba(33,33,33,0.6)] backdrop-blur-sm z-50">
-      <div className="container  mx-auto px-4 py-4">
+    <header className="sm:rounded-full w-[90%] mt-5  border-gray-800 fixed top-0 bg-[rgba(33,33,33,0.6)] backdrop-blur-sm z-50">
+      <div className="container   mx-auto px-4 py-4">
         <nav className="flex  items-center justify-between">
           <div className="text-2xl font-bold text-white">CLAW</div>
 
@@ -43,7 +43,7 @@ export default function Navbar() {
               href="/price"
               className={`transition-colors ${
                 isActive("/price")
-                  ? "text-white bg-teal-400/10 px-3 py-2 rounded-lg"
+                  ? "text-teal-400 bg-teal-400/10 px-3 py-2 rounded-lg"
                   : "text-gray-300 hover:text-white"
               }`}>
               Pricing
@@ -58,7 +58,9 @@ export default function Navbar() {
               Contact
             </Link>
             <Link href="/login">
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white px-2 rounded-full transition-colors">
+              <Button
+                variant="ghost"
+                className="bg-gradient-to-r cursor-pointer from-[#006261] to-[#01B879] rounded-full text-white w-full hover:opacity-90 transition-colors">
                 Get Started
               </Button>
             </Link>
@@ -107,7 +109,9 @@ export default function Navbar() {
               Contact
             </button>
             <button onClick={() => handleNav("/login")} className="w-full">
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white w-full transition-colors">
+              <Button
+                variant="ghost"
+                className="bg-gradient-to-r from-[#006261] to-[#01B879] text-white w-full hover:opacity-90 transition-colors">
                 Get Started
               </Button>
             </button>

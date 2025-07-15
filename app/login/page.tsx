@@ -16,7 +16,7 @@ export default function LoginPage() {
   const isFormInView = useInView(formRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#222a24] to-[#3e463c] text-white relative overflow-hidden">
+    <div className="min-h-screen pt-10 bg-gradient-to-br from-[#222a24] to-[#3e463c] text-white relative overflow-hidden">
       <div className="rounded-xl w-[90%] mx-auto pt-10">
         <Navbar />
       </div>

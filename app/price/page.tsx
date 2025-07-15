@@ -17,7 +17,7 @@ export default function PricingPage() {
   const isPricingInView = useInView(pricingRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#222a24] to-[#3e463c] text-white relative overflow-hidden">
+    <div className="min-h-screen pt-10 bg-gradient-to-br from-[#222a24] to-[#3e463c] text-white relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 bg-[url('/mark.png')] bg-cover bg-center opacity-100" />
       <div className="rounded-xl w-[90%] mx-auto pt-10">
