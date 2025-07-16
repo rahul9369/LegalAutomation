@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useRouter, usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,7 +27,15 @@ export default function Navbar() {
     <header className="sm:rounded-full w-[90%] mt-5  border-gray-800 fixed top-0 bg-[rgba(33,33,33,0.6)] backdrop-blur-sm z-50">
       <div className="container   mx-auto px-4 py-4">
         <nav className="flex  items-center justify-between">
-          <div className="text-2xl font-bold text-white">CLAW</div>
+          <div className="text-5xl text-white max-w-[800px]">
+            <Image
+              src="/clawlogo.png"
+              alt="claw logo Mockup"
+              width={5000}
+              height={10}
+              className="w-full h-auto"
+            />
+          </div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">

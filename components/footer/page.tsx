@@ -1,4 +1,5 @@
 import { Mail, Phone } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,7 +7,16 @@ export default function Footer() {
       <div className="container w-full mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-center gap-8 md:gap-0 text-center md:text-left">
         {/* Left Side */}
         <div className="flex-1 mb-6 md:mb-0 flex flex-col items-center md:items-start">
-          <div className="text-3xl font-bold mb-2">CLAW</div>
+          <div className="text-5xl text-white max-w-[800px]">
+            <Image
+              src="/clawlogo.png"
+              alt="claw logo Mockup"
+              width={5000}
+              height={10}
+              className="w-full h-auto"
+            />
+          </div>
+
           <div className="text-gray-200 text-sm mb-4 max-w-xs">
             Morem Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit. Etiam Eu
             <br />
@@ -24,15 +34,17 @@ export default function Footer() {
           </div>
         </div>
         {/* Right Side */}
-        <div className="flex-1 flex flex-col items-center md:items-end justify-between h-full mt-6 md:mt-0">
+      </div>
+      <div className="grid grid-cols-2  w-[85%] mx-auto">
+        <div className="container px-4 mt-8 border-t border-gray-700 pt-4 text-start text-white text-xs">
+          © 2025 Claw LegalTech. All Rights Reserved.
+        </div>
+        <div className="flex-1 flex flex-col items-center md:items-end justify-between  md:mt-0">
           <div className="text-gray-300 text-sm mb-1 md:mb-0">
             Designed And Developed By
           </div>
           <div className="font-bold text-lg text-white">Claw Legaltech</div>
         </div>
-      </div>
-      <div className="container mx-auto px-4 mt-8 border-t border-gray-700 pt-4 text-center text-white text-xs">
-        © 2025 Claw LegalTech. All Rights Reserved.
       </div>
     </footer>
   );

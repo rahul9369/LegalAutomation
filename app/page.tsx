@@ -153,106 +153,106 @@ export default function HomePage() {
   const isDatabaseInView = useInView(databaseRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="min-h-screen pt-6 text-white relative overflow-x-hidden flex flex-col">
+    <div className="min-h-screen  text-white relative overflow-x-hidden flex flex-col">
       <div className="max-w-9xl w-full mx-auto flex-1">
         <div className="rounded-xl w-[90%] mx-auto pt-10">
-      <Navbar />
+          <Navbar />
         </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-[#222a24] to-[#3e463c] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#222a24] to-[#3e463c] pointer-events-none" />
         <div className="relative  z-10">
-        {/* Hero Section */}
-        <motion.section
+          {/* Hero Section */}
+          <motion.section
             ref={heroRef}
-          id="home"
-            className="relative w-[90%] sm:w-full mx-auto sm:pl-24 py-10 sm:py-16 overflow-hidden"
-          initial={{ opacity: 0, y: 40 }}
+            id="home"
+            className="relative w-[90%] sm:w-full mx-auto sm:pl-24 py-10 sm:py-5 overflow-hidden"
+            initial={{ opacity: 0, y: 40 }}
             animate={
               isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
             }
-          transition={{ duration: 0.8, delay: 0.1 }}>
-          {/* Background Image with Opacity */}
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/mark.png"
-              alt="Legal Background"
-              fill
+            transition={{ duration: 0.8, delay: 0.1 }}>
+            {/* Background Image with Opacity */}
+            <div className="absolute inset-0 z-0">
+              <Image
+                src="/mark.png"
+                alt="Legal Background"
+                fill
                 className="object-cover opacity-40"
-              priority
-            />
-          </div>
+                priority
+              />
+            </div>
 
-          {/* Content with relative positioning to stay above background */}
+            {/* Content with relative positioning to stay above background */}
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center min-w-0">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                  <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight">
-                  Your All-In-One
-                  <br />
-                    <span className="text-xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent">
-                    Legal Automation App
-                  </span>
-                </h1>
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                    Your All-In-One
+                    <br />
+                    <span className="text-xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent">
+                      Legal Automation App
+                    </span>
+                  </h1>
                   <p className="text-gray-400 text-base sm:text-xl max-w-lg">
-                  Simplify your legal procedures with our revolutionary
-                  platform, built to save your time, minimise complexity, and
-                  raise your practice.
-                </p>
-              </div>
+                    Simplify your legal procedures with our revolutionary
+                    platform, built to save your time, minimise complexity, and
+                    raise your practice.
+                  </p>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4 w-full">
                   <Button className="bg-gradient-to-r from-[#006261] to-[#01B879] hover:opacity-90 text-white px-6 py-3 text-base w-full sm:w-auto min-h-[44px]">
-                  Get Started
-                </Button>
-                <Button
-                  variant="outline"
+                    Get Started
+                  </Button>
+                  <Button
+                    variant="outline"
                     className="border-gray-600 text-white hover:bg-gray-800 px-6 py-3 text-base bg-transparent w-full sm:w-auto min-h-[44px]">
-                  Download App
-                </Button>
+                    Download App
+                  </Button>
+                </div>
               </div>
-            </div>
-            {/* Mobile Mockups */}
+              {/* Mobile Mockups */}
               <div className="relative flex justify-center items-center mt-8 lg:mt-0 w-full">
-                <div className="relative w-full max-w-[260px] sm:max-w-sm md:max-w-md lg:max-w-xl">
-                <Image
-                  src="/iPhone15Pro.png"
-                  alt="iPhone 15 Pro Mockup"
+                <div className="relative right-20 w-full">
+                  <Image
+                    src="/iPhone15Pro.png"
+                    alt="iPhone 15 Pro Mockup"
                     width={1000}
-                    height={1000}
-                    className="w-full h-auto"
+                    height={600}
+                    className="w-[1000px] h-auto"
                   />
                 </div>
+              </div>
             </div>
-          </div>
-        </motion.section>
-
-        {/* Trusted Experts Section */}
-        <motion.section
+          </motion.section>
+          {/* <div className="bg-[rgba(33,33,33,1)]"> */}
+          {/* Trusted Experts Section */}
+          <motion.section
             ref={trustedRef}
             className="w-[85%]  mx-auto  max-w-8xl px-4 py-10 sm:py-20"
-          initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={
               isTrustedInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
             }
-          transition={{ duration: 0.8, delay: 0.2 }}>
+            transition={{ duration: 0.8, delay: 0.2 }}>
             <div className="text-center space-y-6 sm:space-y-12">
-            <div className="space-y-4">
+              <div className="space-y-4">
                 <p className="text-teal-400 text-xs sm:text-sm uppercase tracking-wider">
-                CLAW • COLLABORATE • OUR AROUND THE WORLD
-              </p>
+                  CLAW • COLLABORATE • OUR AROUND THE WORLD
+                </p>
                 <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold">
-                Your Trusted Ally For Leading Legal Experts
-              </h2>
+                  Your Trusted Ally For Leading Legal Experts
+                </h2>
                 <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
                   Join thousands of legal professionals who trust CLAW to
                   enhance their practice and deliver exceptional client service.
-              </p>
-            </div>
-            {/* Expert Cards Grid */}
+                </p>
+              </div>
+              {/* Expert Cards Grid */}
               <div className="overflow-x-hidden overflow-y-hidden space-y-4 sm:space-y-6">
-              {/* Row 1 - Right to Left */}
+                {/* Row 1 - Right to Left */}
                 <div className="flex gap-3 sm:gap-4  animate-scroll-left min-w-[480px] sm:min-w-0">
-                {Array.from({ length: 10 }).map((_, index) => (
+                  {Array.from({ length: 10 }).map((_, index) => (
                     <motion.div
-                    key={`top-${index}`}
+                      key={`top-${index}`}
                       initial={{ opacity: 0, y: 20 }}
                       animate={
                         isTrustedInView
@@ -263,54 +263,57 @@ export default function HomePage() {
                       <Card className="bg-gray-800/50 border border-gray-700 aspect-square p-3 sm:p-2 flex items-center justify-center hover:bg-gray-200/10 transition-colors group min-w-[100px] sm:min-w-[200px] h-32 flex-shrink-0">
                         <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center group-hover:bg-gray-100 transition-colors">
                           {/* <div className="w-10 h-8 sm:w-20 sm:h-12 bg-gray-600 rounded-full group-hover:bg-teal-600 transition-colors" /> */}
-                    </div>
-                  </Card>
+                        </div>
+                      </Card>
                     </motion.div>
-                ))}
-              </div>
-              {/* Row 2 - Left to Right */}
+                  ))}
+                </div>
+                {/* Row 2 - Left to Right */}
                 <div className="flex gap-3 sm:gap-4 animate-scroll-right min-w-[480px] sm:min-w-0">
-                {Array.from({ length: 10 }).map((_, index) => (
+                  {Array.from({ length: 10 }).map((_, index) => (
                     <motion.div
-                    key={`bottom-${index}`}
+                      key={`bottom-${index}`}
                       initial={{ opacity: 0, y: 20 }}
                       animate={
                         isTrustedInView
                           ? { opacity: 1, y: 0 }
                           : { opacity: 0, y: 20 }
                       }
-                      transition={{ duration: 0.5, delay: (index + 10) * 0.1 }}>
+                      transition={{
+                        duration: 0.5,
+                        delay: (index + 10) * 0.1,
+                      }}>
                       <Card className="bg-gray-800/50 border border-gray-700 aspect-square p-3 sm:p-2 flex items-center justify-center hover:bg-gray-200/10 transition-colors group min-w-[100px] sm:min-w-[200px] h-32 flex-shrink-0">
                         <div className="w-full h-full bg-white rounded-lg flex items-center justify-center group-hover:bg-gray-100 transition-colors">
                           {/* <div className="w-8 h-8 sm:w-12 sm:h-12 bg-gray-600 rounded-full group-hover:bg-teal-600 transition-colors" /> */}
-                    </div>
-                  </Card>
+                        </div>
+                      </Card>
                     </motion.div>
-                ))}
+                  ))}
                 </div>
+              </div>
             </div>
-          </div>
-        </motion.section>
+          </motion.section>
 
-        {/* Elevate Your Practice Section */}
-        <motion.section
+          {/* Elevate Your Practice Section */}
+          <motion.section
             ref={elevateRef}
             className="w-[85%] rounded-xl border-1 border-white/10 mx-auto bg-[#3E463C]/20 px-4 py-10 sm:py-10"
-          initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={
               isElevateInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
             }
-          transition={{ duration: 0.8, delay: 0.3 }}>
+            transition={{ duration: 0.8, delay: 0.3 }}>
             <div className="text-center  mb-8 sm:mb-16">
               <p className="text-teal-400 text-xs sm:text-sm uppercase tracking-wider mb-4">
-              FOR LAWYERS AND LAW FIRMS AROUND THE GLOBE
-            </p>
+                FOR LAWYERS AND LAW FIRMS AROUND THE GLOBE
+              </p>
               <h2 className="text-base sm:text-xl lg:text-3xl font-bold mb-6">
-              Elevate Your Practice With Unmatched Features
-            </h2>
-          </div>
+                Elevate Your Practice With Unmatched Features
+              </h2>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 max-w-6xl mx-auto">
-            {Array.from({ length: 6 }).map((_, index) => (
+              {Array.from({ length: 6 }).map((_, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -320,60 +323,60 @@ export default function HomePage() {
                       : { opacity: 0, y: 30 }
                   }
                   transition={{ duration: 0.6, delay: index * 0.1 }}>
-              <Card
+                  <Card
                     className="bg-[rgba(33, 33, 33, 1)] border-[#3E463C] cursor-pointer p-4 sm:p-8 text-center  transition-colors group relative shadow-inner hover:scale-105"
                     style={{
                       boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 1)",
                     }}>
                     <div className="mb-3 sm:mb-6 flex justify-center">
                       <div className="w-16 h-16 sm:w-24 sm:h-24 border-dotted border-2 border-gray-600 rounded-full flex items-center justify-center group-hover:bg-teal-600/20 transition-colors">
-                    <Image
-                      src="/head.png"
-                      alt="Feature Icon"
-                      width={60}
-                      height={60}
-                      className="rounded-full"
-                    />
-                  </div>
-                </div>
+                        <Image
+                          src="/head.png"
+                          alt="Feature Icon"
+                          width={60}
+                          height={60}
+                          className="rounded-full"
+                        />
+                      </div>
+                    </div>
                     <h3 className="text-sm sm:text-xl font-semibold text-white mb-2 sm:mb-4">
-                  Streamlining Your Legal Workflow
-                </h3>
+                      Streamlining Your Legal Workflow
+                    </h3>
                     <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
                       Experience Seamless Integration Of Tools Designed To
                       Enhance Your Legal Practice.
-                </p>
-              </Card>
+                    </p>
+                  </Card>
                 </motion.div>
-            ))}
-          </div>
-        </motion.section>
+              ))}
+            </div>
+          </motion.section>
 
-        {/* What Sets Us Apart Section */}
-        <motion.section
+          {/* What Sets Us Apart Section */}
+          <motion.section
             ref={featuresRef}
-          id="features"
-            className="w-[85%] bg-[rgba(33, 33, 33, 1)] mx-auto px-4 py-10 sm:py-20"
-          initial={{ opacity: 0, y: 40 }}
+            id="features"
+            className="w-[90%] bg-[rgba(33, 33, 33, 1)] mx-auto px-4 py-10 sm:py-20"
+            initial={{ opacity: 0, y: 40 }}
             animate={
               isFeaturesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
             }
-          transition={{ duration: 0.8, delay: 0.4 }}>
+            transition={{ duration: 0.8, delay: 0.4 }}>
             <div className="text-center mb-8 sm:mb-16">
               <div className="inline-flex items-center px-4 py-2  text-teal-400 text-xs sm:text-sm font-medium mb-4">
-              WHY CHOOSE CLAW
-            </div>
+                WHY CHOOSE CLAW
+              </div>
               <h2 className="text-base sm:text-xl lg:text-3xl font-bold mb-6">
-              What Sets Us Apart in The Legal Tech Landscape?
-            </h2>
+                What Sets Us Apart in The Legal Tech Landscape?
+              </h2>
               <p className="text-sm sm:text-xl text-gray-400 max-w-2xl mx-auto">
-              Our platform combines years of legal expertise with cutting-edge
-              technology to deliver unmatched results for law firms of all
-              sizes.
-            </p>
-          </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
-            {stats.map((stat, index) => (
+                Our platform combines years of legal expertise with cutting-edge
+                technology to deliver unmatched results for law firms of all
+                sizes.
+              </p>
+            </div>
+            <div className="grid rounded-lg  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
+              {stats.map((stat, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -383,145 +386,148 @@ export default function HomePage() {
                       : { opacity: 0, y: 30 }
                   }
                   transition={{ duration: 0.6, delay: index * 0.15 }}>
-              <Card
-                    className={`p-4 sm:p-16 rounded-none text-center cursor-pointer transition-colors group border-white/10 ${
-                      index < 2 ? "border-b" : "border-t"
-                    } ${
-                      index === 0
-                        ? "bg-[linear-gradient(315deg,_rgba(255,255,255,0.2)_10%,_rgba(255,255,255,0)_100%)]" // 1st: bottom-right
-                        : index === 1
-                        ? "bg-[linear-gradient(45deg,_rgba(255,255,255,0.2)_0%,_rgba(255,255,255,0)_100%)]" // 2nd: bottom-left
-                        : index === 2
-                        ? "bg-[linear-gradient(225deg,_rgba(255,255,255,0.2)_0%,_rgba(255,255,255,0)_100%)]" // 3rd: top-right
-                        : index === 3
-                        ? "bg-[linear-gradient(135deg,_rgba(255,255,255,0.2)_0%,_rgba(255,255,255,0)_100%)]" // 4th: top-left
-                        : "bg-transparent"
-                    }`}>
+                  <Card
+                    className={`
+        p-4 sm:p-16 rounded-none text-center cursor-pointer transition-colors group border-gray-700/10
+        ${index < 2 ? "border-b" : "border-t"}
+        ${
+          index === 0
+            ? "bg-[linear-gradient(315deg,_rgba(255,255,255,0.3)_10%,_rgba(255,255,255,0)_100%)]"
+            : index === 1
+            ? "bg-[linear-gradient(45deg,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)]"
+            : index === 2
+            ? "bg-[linear-gradient(225deg,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)]"
+            : index === 3
+            ? "bg-[linear-gradient(135deg,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)]"
+            : "bg-transparent"
+        }
+        hover:brightness-110
+      `}>
                     <div className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent mb-2 sm:mb-4">
-                  {stat.number}
-                </div>
+                      {stat.number}
+                    </div>
                     <h3 className="text-xs sm:text-lg font-semibold text-white mb-2 sm:mb-4">
-                  {stat.title}
-                </h3>
+                      {stat.title}
+                    </h3>
                     <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                  {stat.description}
-                </p>
-              </Card>
+                      {stat.description}
+                    </p>
+                  </Card>
                 </motion.div>
-            ))}
-          </div>
-        </motion.section>
+              ))}
+            </div>
+          </motion.section>
 
-        {/* App Steps Section */}
-        <motion.section
+          {/* App Steps Section */}
+          <motion.section
             ref={stepsRef}
             className="w-[90%] mx-auto px-4 py-10 sm:py-20"
-          initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={
               isStepsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
             }
-          transition={{ duration: 0.8, delay: 0.5 }}>
+            transition={{ duration: 0.8, delay: 0.5 }}>
             <div className="relative pt-2 ">
-            <div>
+              <div>
                 <div className="text-center  mb-6 sm:mb-16">
                   <div className="inline-flex items-center px-4 py-2  text-teal-400 text-xs sm:text-sm font-medium mb-4">
-                  HOW TO USE CLAW
-                </div>
+                    HOW TO USE CLAW
+                  </div>
                   <h2 className="text-base sm:text-xl lg:text-3xl font-bold mb-6">
-                  {"Let&apos;s"} Go Through Some Steps For Using The App
-                </h2>
+                    {"Let&apos;s"} Go Through Some Steps For Using The App
+                  </h2>
                   <p className="text-sm sm:text-xl text-gray-400 max-w-2xl mx-auto">
-                  Get started with CLAW in minutes. Our intuitive interface
-                  makes legal automation accessible to everyone.
-                </p>
-              </div>
+                    Get started with CLAW in minutes. Our intuitive interface
+                    makes legal automation accessible to everyone.
+                  </p>
+                </div>
 
-              {/* Step Navigation */}
+                {/* Step Navigation */}
                 <div className="flex w-full z-10 justify-center mb-6 sm:mb-16">
                   <div className="sm:flex  border-1 grid grid-cols-2  w-full sm:w-[95%] justify-center gap-2 bg-gray-800/50 rounded-xl p-1 sm:p-2">
-                  {steps.map((step, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleStepClick(step.id)}
+                    {steps.map((step, index) => (
+                      <button
+                        key={index}
+                        onClick={() => handleStepClick(step.id)}
                         className={` flex-1  border-1 cursor-pointer min-w-[80px] py-2 sm:py-3 z-10 rounded-lg text-xs sm:text-sm font-medium transition-all ${
-                        step.active
+                          step.active
                             ? "bg-gradient-to-r  from-[#006261] to-[#01B879] text-white shadow-lg"
-                          : "text-gray-400 hover:text-white hover:bg-gray-700/50"
-                      }`}>
-                      {step.label}
-                    </button>
-                  ))}
+                            : "text-gray-400 hover:text-white hover:bg-gray-700/50"
+                        }`}>
+                        {step.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/mark.png"
+                  alt="Legal Background"
+                  fill
+                  className="object-cover opacity-40"
+                  priority
+                />
+              </div>
+            </div>
+            {/* Dashboard Preview */}
+            <div className="grid grid-cols-1 bg-white/10  h-140 backdrop-blur-sm lg:grid-cols-2 border border-white/10 rounded-lg gap-4 lg:gap-16 items-center">
+              <div
+                className={`flex justify-center transition-all duration-500 ${
+                  isAnimating
+                    ? "transform translate-x-full opacity-0"
+                    : "transform translate-x-0 opacity-100"
+                }`}>
+                <Image
+                  src={currentStepData.image || "/placeholder.svg"}
+                  alt="Dashboard Preview"
+                  width={600}
+                  height={600}
+                  className="w-full max-w-[260px] sm:max-w-md lg:max-w-lg h-auto"
+                />
+              </div>
+              <div
+                className={`space-y-4 sm:space-y-8 rounded-lg p-2 sm:p-6 transition-all duration-500 ${
+                  isAnimating
+                    ? "transform -translate-x-full opacity-0"
+                    : "transform translate-x-0 opacity-100"
+                }`}>
+                <div>
+                  <h3 className="text-base sm:text-3xl font-bold mb-2 sm:mb-6">
+                    {currentStepData.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm sm:text-lg leading-relaxed mb-2 sm:mb-6">
+                    {currentStepData.description}
+                  </p>
+                  <p className="text-gray-400 text-sm sm:text-lg leading-relaxed">
+                    {currentStepData.description2}
+                  </p>
                 </div>
               </div>
             </div>
-            <div className="absolute inset-0 z-0">
-              <Image
-                src="/mark.png"
-                alt="Legal Background"
-                fill
-                  className="object-cover opacity-40"
-                priority
-              />
-            </div>
-          </div>
-          {/* Dashboard Preview */}
-            <div className="grid grid-cols-1 bg-[rgba(33,33,33,0.8)] backdrop-blur-sm lg:grid-cols-2 border border-white/10 rounded-lg gap-4 lg:gap-16 items-center">
-            <div
-                className={`flex justify-center transition-all duration-500 ${
-                isAnimating
-                  ? "transform translate-x-full opacity-0"
-                  : "transform translate-x-0 opacity-100"
-              }`}>
-              <Image
-                src={currentStepData.image || "/placeholder.svg"}
-                alt="Dashboard Preview"
-                width={600}
-                height={600}
-                  className="w-full max-w-[260px] sm:max-w-md lg:max-w-lg h-auto"
-              />
-            </div>
-            <div
-                className={`space-y-4 sm:space-y-8 rounded-lg p-2 sm:p-6 transition-all duration-500 ${
-                isAnimating
-                  ? "transform -translate-x-full opacity-0"
-                  : "transform translate-x-0 opacity-100"
-              }`}>
-              <div>
-                  <h3 className="text-base sm:text-3xl font-bold mb-2 sm:mb-6">
-                  {currentStepData.title}
-                </h3>
-                  <p className="text-gray-400 text-sm sm:text-lg leading-relaxed mb-2 sm:mb-6">
-                  {currentStepData.description}
-                </p>
-                  <p className="text-gray-400 text-sm sm:text-lg leading-relaxed">
-                  {currentStepData.description2}
-                </p>
-              </div>
-            </div>
-          </div>
-        </motion.section>
+          </motion.section>
 
-        {/* Legal Database Section */}
-        <motion.section
+          {/* Legal Database Section */}
+          <motion.section
             ref={databaseRef}
-            className="w-[85%] bg-[rgba(33, 33, 33, 1)] mx-auto px-4 py-10 sm:py-20"
-          initial={{ opacity: 0, y: 40 }}
+            className="w-[90%] bg-[rgba(33, 33, 33, 1)] mx-auto px-4 py-10 sm:py-20"
+            initial={{ opacity: 0, y: 40 }}
             animate={
               isDatabaseInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
             }
-          transition={{ duration: 0.8, delay: 0.6 }}>
+            transition={{ duration: 0.8, delay: 0.6 }}>
             <div className="text-center mb-6 sm:mb-16">
               <h2 className="text-base sm:text-xl lg:text-3xl font-bold mb-6">
-              This Is What Our Legal Database Looks Like
-            </h2>
+                This Is What Our Legal Database Looks Like
+              </h2>
               <p className="text-sm sm:text-xl text-gray-400 max-w-2xl mx-auto">
-              Access comprehensive legal resources, precedents, and templates
-              all in one place. Our database is constantly updated with the
-              latest legal information.
-            </p>
-          </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
-            {databaseStats.map((stat, index) => (
+                Access comprehensive legal resources, precedents, and templates
+                all in one place. Our database is constantly updated with the
+                latest legal information.
+              </p>
+            </div>
+            <div className="grid  rounded-lg  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+              {databaseStats.map((stat, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -531,27 +537,28 @@ export default function HomePage() {
                       : { opacity: 0, y: 30 }
                   }
                   transition={{ duration: 0.6, delay: index * 0.1 }}>
-              <Card
-                    className={`p-4 rounded-none sm:p-8 text-center border-none transition-transform transform group 
+                  <Card
+                    className={`p-4 h-60 rounded-none sm:p-8 text-center border-none transition-transform transform group 
         ${
           index % 2 === 0
             ? "bg-[linear-gradient(135deg,_rgba(255,255,255,0.1)_60%,_rgba(255,255,255,0.3)_110%)]" // even - bottom-left
             : "bg-[linear-gradient(225deg,_rgba(255,255,255,0.1)_60%,_rgba(255,255,255,0.3)_110%)]" // odd - bottom-right
         }`}>
                     <div className="text-lg sm:text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent mb-2 sm:mb-4">
-                  {stat.number}
-                </div>
+                      {stat.number}
+                    </div>
                     <h3 className="text-xs sm:text-lg font-semibold text-white mb-2 sm:mb-4">
-                  {stat.title}
-                </h3>
+                      {stat.title}
+                    </h3>
                     <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                  {stat.description}
-                </p>
-              </Card>
+                      {stat.description}
+                    </p>
+                  </Card>
                 </motion.div>
-            ))}
-          </div>
-        </motion.section>
+              ))}
+            </div>
+          </motion.section>
+          {/* </div> */}
         </div>
       </div>
       <Footer />
