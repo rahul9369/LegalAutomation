@@ -158,8 +158,8 @@ export default function HomePage() {
         <div className="rounded-xl w-[90%] mx-auto pt-10">
           <Navbar />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-[#222a24] to-[#3e463c] pointer-events-none" />
-        <div className="relative  z-10">
+        <div className="absolute  inset-0 bg-gradient-to-br from-[#222a24] to-[#3e463c] pointer-events-none" />
+        <div className="relative  pt-10 sm:pt-0 z-10">
           {/* Hero Section */}
           <motion.section
             ref={heroRef}
@@ -182,13 +182,13 @@ export default function HomePage() {
             </div>
 
             {/* Content with relative positioning to stay above background */}
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center min-w-0">
+            <div className="relative z-10  grid grid-cols-1 lg:grid-cols-2 lg:gap-12 items-center min-w-0">
               <div className="space-y-8">
-                <div className="space-y-4">
+                <div className="space-y-4 ">
                   <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                     Your All-In-One
                     <br />
-                    <span className="text-xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent">
+                    <span className="text-xl pt-50 sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent">
                       Legal Automation App
                     </span>
                   </h1>
@@ -211,7 +211,7 @@ export default function HomePage() {
               </div>
               {/* Mobile Mockups */}
               <div className="relative flex justify-center items-center mt-8 lg:mt-0 w-full">
-                <div className="relative right-20 w-full">
+                <div className="relative sm:right-20 w-full">
                   <Image
                     src="/iPhone15Pro.png"
                     alt="iPhone 15 Pro Mockup"
@@ -227,7 +227,7 @@ export default function HomePage() {
           {/* Trusted Experts Section */}
           <motion.section
             ref={trustedRef}
-            className="w-[85%]  mx-auto  max-w-8xl px-4 py-10 sm:py-20"
+            className="sm:w-[85%] w-[90%]  mx-auto  max-w-8xl px-4 py-4 sm:py-20"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isTrustedInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -260,7 +260,7 @@ export default function HomePage() {
                           : { opacity: 0, y: 20 }
                       }
                       transition={{ duration: 0.5, delay: index * 0.1 }}>
-                      <Card className="bg-gray-800/50 border border-gray-700 aspect-square p-3 sm:p-2 flex items-center justify-center hover:bg-gray-200/10 transition-colors group min-w-[100px] sm:min-w-[200px] h-32 flex-shrink-0">
+                      <Card className="bg-gray-800/50 border border-gray-700 aspect-square p-1 sm:p-2 flex items-center justify-center hover:bg-gray-200/10 transition-colors group min-w-[150px] sm:min-w-[200px] h-24 sm:h-32 flex-shrink-0">
                         <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center group-hover:bg-gray-100 transition-colors">
                           {/* <div className="w-10 h-8 sm:w-20 sm:h-12 bg-gray-600 rounded-full group-hover:bg-teal-600 transition-colors" /> */}
                         </div>
@@ -283,7 +283,7 @@ export default function HomePage() {
                         duration: 0.5,
                         delay: (index + 10) * 0.1,
                       }}>
-                      <Card className="bg-gray-800/50 border border-gray-700 aspect-square p-3 sm:p-2 flex items-center justify-center hover:bg-gray-200/10 transition-colors group min-w-[100px] sm:min-w-[200px] h-32 flex-shrink-0">
+                      <Card className="bg-gray-800/50 border border-gray-700 aspect-square p-1 sm:p-2 flex items-center justify-center hover:bg-gray-200/10 transition-colors group min-w-[150px] sm:min-w-[200px] h-24 sm:h-32 flex-shrink-0">
                         <div className="w-full h-full bg-white rounded-lg flex items-center justify-center group-hover:bg-gray-100 transition-colors">
                           {/* <div className="w-8 h-8 sm:w-12 sm:h-12 bg-gray-600 rounded-full group-hover:bg-teal-600 transition-colors" /> */}
                         </div>
@@ -298,7 +298,7 @@ export default function HomePage() {
           {/* Elevate Your Practice Section */}
           <motion.section
             ref={elevateRef}
-            className="w-[85%] rounded-xl border-1 border-white/10 mx-auto bg-[#3E463C]/20 px-4 py-10 sm:py-10"
+            className="w-[90%] sm:w-[85%] rounded-xl border-1 border-white/10 mx-auto bg-[#3E463C]/20 px-2 sm:px-4 py-4 sm:py-10"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isElevateInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -312,7 +312,7 @@ export default function HomePage() {
                 Elevate Your Practice With Unmatched Features
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 max-w-6xl mx-auto">
               {Array.from({ length: 6 }).map((_, index) => (
                 <motion.div
                   key={index}
@@ -329,7 +329,7 @@ export default function HomePage() {
                       boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 1)",
                     }}>
                     <div className="mb-3 sm:mb-6 flex justify-center">
-                      <div className="w-16 h-16 sm:w-24 sm:h-24 border-dotted border-2 border-gray-600 rounded-full flex items-center justify-center group-hover:bg-teal-600/20 transition-colors">
+                      <div className="w-8 h-8 sm:w-24 sm:h-24 border-dotted border-2 border-gray-600 rounded-full flex items-center justify-center group-hover:bg-teal-600/20 transition-colors">
                         <Image
                           src="/head.png"
                           alt="Feature Icon"
@@ -339,10 +339,10 @@ export default function HomePage() {
                         />
                       </div>
                     </div>
-                    <h3 className="text-sm sm:text-xl font-semibold text-white mb-2 sm:mb-4">
+                    <h3 className="text-[12px] sm:text-xl font-semibold text-white mb-2 sm:mb-4">
                       Streamlining Your Legal Workflow
                     </h3>
-                    <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+                    <p className="text-gray-400  text-[10px] sm:text-sm leading-relaxed">
                       Experience Seamless Integration Of Tools Designed To
                       Enhance Your Legal Practice.
                     </p>
@@ -356,7 +356,7 @@ export default function HomePage() {
           <motion.section
             ref={featuresRef}
             id="features"
-            className="w-[90%] bg-[rgba(33, 33, 33, 1)] mx-auto px-4 py-10 sm:py-20"
+            className="w-[90%] bg-[rgba(33, 33, 33, 1)] mx-auto px-4 py-4 sm:py-20"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isFeaturesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -375,7 +375,7 @@ export default function HomePage() {
                 sizes.
               </p>
             </div>
-            <div className="grid rounded-lg  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
+            <div className="grid rounded-lg  grid-cols-2  md:grid-cols-2 lg:grid-cols-2 ">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -388,7 +388,7 @@ export default function HomePage() {
                   transition={{ duration: 0.6, delay: index * 0.15 }}>
                   <Card
                     className={`
-        p-4 sm:p-16 rounded-none text-center cursor-pointer transition-colors group border-gray-700/10
+        p-4 sm:p-16 rounded-none h-60 text-center cursor-pointer transition-colors group border-gray-700/10
         ${index < 2 ? "border-b" : "border-t"}
         ${
           index === 0
@@ -421,7 +421,7 @@ export default function HomePage() {
           {/* App Steps Section */}
           <motion.section
             ref={stepsRef}
-            className="w-[90%] mx-auto px-4 py-10 sm:py-20"
+            className="w-[90%] mx-auto px-4 py-4 sm:py-20"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isStepsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
@@ -433,8 +433,8 @@ export default function HomePage() {
                   <div className="inline-flex items-center px-4 py-2  text-teal-400 text-xs sm:text-sm font-medium mb-4">
                     HOW TO USE CLAW
                   </div>
-                  <h2 className="text-base sm:text-xl lg:text-3xl font-bold mb-6">
-                    {"Let&apos;s"} Go Through Some Steps For Using The App
+                  <h2 className="text-sm sm:text-xl lg:text-3xl font-bold mb-6">
+                    Let's Go Through Some Steps For Using The App
                   </h2>
                   <p className="text-sm sm:text-xl text-gray-400 max-w-2xl mx-auto">
                     Get started with CLAW in minutes. Our intuitive interface
@@ -510,14 +510,14 @@ export default function HomePage() {
           {/* Legal Database Section */}
           <motion.section
             ref={databaseRef}
-            className="w-[90%] bg-[rgba(33, 33, 33, 1)] mx-auto px-4 py-10 sm:py-20"
+            className="w-[90%] bg-[rgba(33, 33, 33, 1)] mx-auto px-4 py-4 sm:py-20"
             initial={{ opacity: 0, y: 40 }}
             animate={
               isDatabaseInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
             }
             transition={{ duration: 0.8, delay: 0.6 }}>
             <div className="text-center mb-6 sm:mb-16">
-              <h2 className="text-base sm:text-xl lg:text-3xl font-bold mb-6">
+              <h2 className=" text-sm sm:text-xl lg:text-3xl font-bold mb-6">
                 This Is What Our Legal Database Looks Like
               </h2>
               <p className="text-sm sm:text-xl text-gray-400 max-w-2xl mx-auto">
@@ -526,7 +526,7 @@ export default function HomePage() {
                 latest legal information.
               </p>
             </div>
-            <div className="grid  rounded-lg  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+            <div className="grid  rounded-lg  grid-cols-2 md:grid-cols-2 lg:grid-cols-4 ">
               {databaseStats.map((stat, index) => (
                 <motion.div
                   key={index}

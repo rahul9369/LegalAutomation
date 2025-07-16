@@ -85,14 +85,14 @@ export default function SignupPage() {
             </div>
             {/* Account Type Toggle */}
             <div className="flex items-center justify-between gap-4 sm:gap-8 mt-2 mb-4">
-              <span className="text-[18px] text-gray-400">
+              <span className=" text-[12px] sm:text-[18px] text-gray-400">
                 Choose Account Type:
               </span>
               <div className="flex rounded-lg overflow-hidden border border-gray-600">
                 <button
                   type="button"
                   onClick={() => setAccountType("Law Firm")}
-                  className={`sm:px-6 px-2 py-2 text-[15px] font-semibold transition-colors ${
+                  className={`sm:px-6 px-4 py-2 text-[10px] sm:text-[15px] font-semibold transition-colors ${
                     accountType === "Law Firm"
                       ? "bg-gradient-to-r from-[#006261] to-[#01B879] text-white"
                       : "bg-gray-700 text-gray-300 hover:bg-gray-600"
@@ -102,7 +102,7 @@ export default function SignupPage() {
                 <button
                   type="button"
                   onClick={() => setAccountType("Advocate")}
-                  className={`sm:px-6 px-2 py-2 text-[15px] font-semibold transition-colors ${
+                  className={`sm:px-6 px-2 py-2 text-[10px] sm:text-[15px] font-semibold transition-colors ${
                     accountType === "Advocate"
                       ? "bg-gradient-to-r from-[#006261] to-[#01B879] text-white"
                       : "bg-gray-700 text-gray-300 hover:bg-gray-600"

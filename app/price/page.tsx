@@ -32,16 +32,16 @@ export default function PricingPage() {
           initial={{ opacity: 0, y: 40 }}
           animate={isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.8, delay: 0.1 }}>
-          <div className="text-center space-y-8">
-            <div className="inline-flex items-center px-4 py-2  text-teal-400 text-sm font-medium">
+          <div className="text-center space-y-2 sm:space-y-8">
+            <div className="inline-flex items-center px-4 sm:py-2  text-teal-400 text-sm font-medium">
               PRICING PLANS
             </div>
-            <h1 className="text-lg lg:text-3xl font-bold leading-tight">
+            <h1 className="text-sm lg:text-3xl font-bold leading-tight">
               Choose The Perfect Plan For Your Practice
             </h1>
-            <p className="sm:text-xl text-md text-gray-400 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your law
-              firm&apos;s needs. Start free and upgrade as you grow.
+            <p className="sm:text-xl text-sm text-gray-400 max-w-2xl mx-auto">
+              Flexible pricing options designed to scale with your law firm's
+              needs. Start free and upgrade as you grow.
             </p>
           </div>
         </motion.section>
@@ -49,7 +49,7 @@ export default function PricingPage() {
         {/* Pricing Section */}
         <motion.section
           ref={pricingRef}
-          className="container mx-auto px-4 py-5 sm:py-20"
+          className="container mx-auto px-4 py-2 sm:py-20"
           initial={{ opacity: 0, y: 40 }}
           animate={
             isPricingInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }

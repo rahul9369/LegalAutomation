@@ -24,7 +24,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sm:rounded-full w-[90%] mt-5  border-gray-800 fixed top-0 bg-[rgba(33,33,33,0.6)] backdrop-blur-sm z-50">
+    <header className="rounded-xl sm:rounded-full w-[90%] mt-5  border-gray-800 fixed top-0 bg-[rgba(33,33,33,0.6)] backdrop-blur-sm z-50">
       <div className="container   mx-auto px-4 py-4">
         <nav className="flex  items-center justify-between">
           <div className="text-5xl text-white max-w-[800px]">
@@ -94,32 +94,35 @@ export default function Navbar() {
         {menuOpen && (
           <div className="md:hidden mt-4 bg-[#232a24]  shadow-lg py-4 px-6 flex flex-col gap-4 animate-fade-in">
             <button
-              className={`text-left transition-colors ${
+              className={`text-right transition-colors ${
                 isActive("/")
                   ? "text-teal-400 bg-teal-400/10 px-3 py-2 rounded-lg"
-                  : "text-teal-400 hover:text-teal-300"
+                  : "text-white hover:text-teal-300"
               }`}
               onClick={() => handleNav("/")}>
               Home
             </button>
+            <hr />
             <button
-              className={`text-left transition-colors ${
+              className={`text-right transition-colors ${
                 isActive("/price")
-                  ? "text-white bg-teal-400/10 px-3 py-2 rounded-lg"
-                  : "text-gray-300 hover:text-white"
+                  ? "text-teal-400 bg-teal-400/10 px-3 py-2 rounded-lg"
+                  : "text-white hover:text-white"
               }`}
               onClick={() => handleNav("/price")}>
               Pricing
             </button>
+            <hr />
             <button
-              className={`text-left transition-colors ${
+              className={`text-right transition-colors ${
                 isActive("/contact")
                   ? "text-teal-400 bg-teal-400/10 px-3 py-2 rounded-lg"
-                  : "hover:text-teal-400"
+                  : "hover:text-teal-400 text-white"
               }`}
               onClick={() => handleNav("/contact")}>
               Contact
             </button>
+            <hr />
             <button onClick={() => handleNav("/login")} className="w-full">
               <Button
                 variant="ghost"

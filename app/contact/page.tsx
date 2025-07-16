@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar/page";
 import Footer from "@/components/footer/page";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 export default function ContactPage() {
   // Create refs for scroll-triggered animations
@@ -37,7 +38,7 @@ export default function ContactPage() {
               className="text-lg md:text-3xl font-bold leading-tight 
                bg-gradient-to-r from-[#006261] to-[#01B879] 
                bg-clip-text text-transparent">
-              Let&apos;s Discuss About How We Can Help
+              Let's Discuss About How We Can Help
               <br />
               You Excel in Your Legal Space
             </h1>
@@ -54,27 +55,33 @@ export default function ContactPage() {
           }
           transition={{ duration: 0.8, delay: 0.2 }}>
           <div className="max-w-6xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-8 md:p-12 border border-gray-700">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-2 sm:p-8 md:p-12 border border-gray-700">
               <div className="grid md:grid-cols-2 gap-12">
                 {/* Left Side - Company Info */}
                 <div className="space-y-8">
                   <div>
                     <h2 className="text-xl sm:text-center sm:text-3xl font-bold mb-2">
-                      CLAW
+                      <Image
+                        src="/clawlogo.png"
+                        alt="claw logo Mockup"
+                        width={100}
+                        height={10}
+                        className="sm:w-40 w-20 h-auto"
+                      />
                     </h2>
-                    <p className="text-gray-400 sm:text-center text-sm sm:text-sx">
+                    <p className="text-gray-400 sm:text-start text-sm sm:text-sx">
                       Legal Automation App
                     </p>
                   </div>
 
                   <div className="space-y-6">
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      We&apos;d Love To Hear From You. Whether You Have
+                    <p className="text-gray-300 text-[12px] sm:text-sm leading-relaxed">
+                      We Love To Hear From You. Whether You Have
                       <br />A Question, Idea Or Just Want To Say Hello —<br />
-                      Reach Out, We&apos;d Love To Chat With You.
+                      Reach Out, We Love To Chat With You.
                     </p>
 
-                    <div className="space-y-1 sm:space-y-4">
+                    <div className="space-y-2 sm:space-y-4">
                       <div className="flex items-center space-x-3">
                         <div className="w-10 h-10 border-1 bg-[rgba(62, 70, 60, 0.2)] rounded-lg flex items-center justify-center">
                           <Phone className="w-5 h-5 text-[#01B679] " />
@@ -99,7 +106,7 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div className="flex space-y-1 sm:space-x-4 pt-4">
+                    <div className="flex space-x-2 space-y-1 sm:space-x-4 pt-4">
                       <div
                         className="w-10 border-1 h-10 bg-[rgba(62, 70, 60, 1)] rounded-lg flex items-center justify-center hover:bg-gray-600 transition-colors cursor-pointer"
                         style={{
@@ -134,7 +141,7 @@ export default function ContactPage() {
                       className="w-full bg-white/1 border border-gray-500 text-white placeholder-gray-400 focus:border-teal-400 focus:ring-teal-400 rounded-lg px-4 py-3"
                     />
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-2 sm:gap-4">
                       <input
                         type="tel"
                         placeholder="Enter Your Phone Number"
@@ -147,7 +154,7 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-2 gap-2 sm:gap-4">
                       <input
                         type="text"
                         placeholder="Last Name"
