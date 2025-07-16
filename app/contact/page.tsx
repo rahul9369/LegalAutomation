@@ -38,7 +38,7 @@ export default function ContactPage() {
               className="text-lg md:text-3xl font-bold leading-tight 
                bg-gradient-to-r from-[#006261] to-[#01B879] 
                bg-clip-text text-transparent">
-              Let's Discuss About How We Can Help
+              Lets Discuss About How We Can Help
               <br />
               You Excel in Your Legal Space
             </h1>

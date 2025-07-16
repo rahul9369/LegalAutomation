@@ -434,7 +434,7 @@ export default function HomePage() {
                     HOW TO USE CLAW
                   </div>
                   <h2 className="text-sm sm:text-xl lg:text-3xl font-bold mb-6">
-                    Let's Go Through Some Steps For Using The App
+                    Lets Go Through Some Steps For Using The App
                   </h2>
                   <p className="text-sm sm:text-xl text-gray-400 max-w-2xl mx-auto">
                     Get started with CLAW in minutes. Our intuitive interface
