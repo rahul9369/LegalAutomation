@@ -61,37 +61,38 @@ export default function PricingPage() {
               className="bg-[rgba(62, 70, 60, 0.5)] transform backdrop-blur-md hover:scale-105 border border-gray-700 p-8 text-center  transition-colors group relative"
               style={{ boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 1)" }}>
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Starter</h3>
-                <p className="text-gray-400 text-sm">
+                <h3 className="text-2xl text-start font-bold text-white mb-2">
+                  Free
+                </h3>
+                <hr />
+                {/* <p className="text-gray-400 text-sm">
                   Perfect for solo practitioners
-                </p>
+                </p> */}
               </div>
               <div className="mb-8">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent">
-                  Free
-                </div>
-                <p className="text-gray-400 text-sm mt-2">Forever</p>
+                <div className="text-4xl font-bold ">₹ 0 /month</div>
               </div>
               <ul className="space-y-3 text-left mb-8">
+                <p className="text-white text-start text-sm mt-2">
+                  Perfect for getting Started
+                </p>
                 <li className="flex items-center text-gray-300">
                   <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  Up to 5 cases
+                  Free Feature
                 </li>
                 <li className="flex items-center text-gray-300">
                   <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  Basic document templates
+                  Free Feature
                 </li>
                 <li className="flex items-center text-gray-300">
                   <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  Email support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  Mobile app access
+                  Free Feature
                 </li>
               </ul>
-              <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                Get Started Free
+              <Button
+                className="w-full cursor-pointer text-sm bg-[linear-gradient(180deg,_#808E7C_0%,_#3E463C_100%)]
+ hover:bg-teal-700 text-white py-3 rounded-lg  transition-colors">
+                Get It Now
               </Button>
             </Card>
 
@@ -105,41 +106,42 @@ export default function PricingPage() {
                 </div>
               </div>
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Professional
+                <h3 className="text-2xl text-start font-bold text-white mb-2">
+                  Essential
                 </h3>
-                <p className="text-teal-100 text-sm">
+                <hr />
+                {/* <p className="text-teal-100 text-sm">
                   Ideal for growing law firms
-                </p>
+                </p> */}
               </div>
               <div className="mb-8">
-                <div className="text-4xl font-bold text-white">$49</div>
-                <p className="text-teal-100 text-sm mt-2">per month</p>
+                <div className="text-4xl text-start font-bold text-white">
+                  {" "}
+                  ₹ 599 /month
+                </div>
               </div>
               <ul className="space-y-3 text-left mb-8">
+                {/* <li className="flex items-center text-white">
+                  <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
+                </li> */}
+                <p className="text-white text-sm mt-2">Best for Individuals</p>
                 <li className="flex items-center text-white">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Unlimited cases
+                  Essential Feature
                 </li>
                 <li className="flex items-center text-white">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Advanced document automation
+                  Essential Feature
                 </li>
                 <li className="flex items-center text-white">
                   <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Priority support
-                </li>
-                <li className="flex items-center text-white">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Team collaboration tools
-                </li>
-                <li className="flex items-center text-white">
-                  <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                  Advanced analytics
+                  Essential Feature
                 </li>
               </ul>
-              <Button className="w-full bg-white text-teal-600 hover:bg-gray-100 py-3 rounded-lg font-semibold transition-colors">
-                Start Free Trial
+              <Button
+                className="w-full cursor-pointer bg-gradient-to-r from-[#006261] to-[#01B879]
+ text-white hover:bg-gray-100 py-3 rounded-lg text-sm ">
+                Active Now
               </Button>
             </Card>
 
@@ -148,41 +150,42 @@ export default function PricingPage() {
               className="bg-[rgba(62, 70, 60, 0.5)]  backdrop-blur-md  transform hover:scale-105 border border-gray-700 p-8 text-center  transition-colors group relative"
               style={{ boxShadow: "inset 0 10px 10px rgba(62, 70, 60, 1)" }}>
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  Enterprise
+                <h3 className="text-2xl font-bold text-start text-white mb-2">
+                  Premium
                 </h3>
-                <p className="text-gray-400 text-sm">For large law firms</p>
+                <hr />
+                {/* <p className="text-gray-400 text-sm">For large law firms</p> */}
               </div>
               <div className="mb-8">
-                <div className="text-4xl font-bold bg-gradient-to-r from-[#006261] to-[#01B879] bg-clip-text text-transparent">
-                  Custom
+                <div className="text-4xl text-start font-bold ">
+                  ₹ 999 /month
                 </div>
-                <p className="text-gray-400 text-sm mt-2">Contact sales</p>
               </div>
+
               <ul className="space-y-3 text-left mb-8">
+                <p className="text-gray-100 text-sm mt-2">Best for Law Firms</p>
+
                 <li className="flex items-center text-gray-300">
                   <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  Everything in Professional
+                  All Features of Essential
                 </li>
                 <li className="flex items-center text-gray-300">
                   <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  Custom integrations
+                  Premium Feature
                 </li>
                 <li className="flex items-center text-gray-300">
                   <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  Dedicated account manager
+                  Premium Feature
                 </li>
                 <li className="flex items-center text-gray-300">
                   <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  Custom training & onboarding
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                  Advanced security features
+                  Premium Feature
                 </li>
               </ul>
-              <Button className="w-full  bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-lg font-semibold transition-colors">
-                Contact Sales
+              <Button
+                className="w-full cursor-pointer  bg-[linear-gradient(180deg,_#808E7C_0%,_#3E463C_100%)]
+ hover:bg-teal-700 text-white py-3 rounded-lg text-sm transition-colors">
+                Get It Now
               </Button>
             </Card>
           </div>

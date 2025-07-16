@@ -34,7 +34,7 @@ export default function Navbar() {
               href="/"
               className={`transition-colors ${
                 isActive("/")
-                  ? "text-teal-400 bg-teal-400/10 px-3 py-2 rounded-lg"
+                  ? "text-teal-400 bg-teal-400/10 px-3 py-2 rounded-full"
                   : "text-white hover:text-teal-300"
               }`}>
               Home
@@ -43,8 +43,8 @@ export default function Navbar() {
               href="/price"
               className={`transition-colors ${
                 isActive("/price")
-                  ? "text-teal-400 bg-teal-400/10 px-3 py-2 rounded-lg"
-                  : "text-gray-300 hover:text-white"
+                  ? "text-teal-400 bg-teal-400/10 px-3 py-2 rounded-full"
+                  : "text-gray-300 hover:text-teal-300"
               }`}>
               Pricing
             </Link>
@@ -52,17 +52,20 @@ export default function Navbar() {
               href="/contact"
               className={`transition-colors ${
                 isActive("/contact")
-                  ? "text-teal-400 bg-teal-400/10 px-3 py-2 rounded-lg"
+                  ? "text-teal-400 bg-teal-400/10 px-3 py-2 rounded-full"
                   : "hover:text-teal-400"
               }`}>
               Contact
             </Link>
-            <Link href="/login">
-              <Button
+            <Link
+              href="/login"
+              className="bg-gradient-to-r px-4 py-2 cursor-pointer from-[#006261] to-[#01B879]  rounded-full text-white w-full hover:opacity-90 transition-colors">
+              {/* <Button
                 variant="ghost"
-                className="bg-gradient-to-r cursor-pointer from-[#006261] to-[#01B879] rounded-full text-white w-full hover:opacity-90 transition-colors">
+                className="bg-gradient-to-r cursor-pointer from-[#006261] to-[#01B879]  rounded-full text-white w-full hover:opacity-90 transition-colors">
                 Get Started
-              </Button>
+              </Button> */}
+              Get Started
             </Link>
           </div>
 

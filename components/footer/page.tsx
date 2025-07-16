@@ -2,8 +2,8 @@ import { Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#3e463c] z-1 text-white pt-12 pb-4 sm:mt-5 border-t border-gray-700">
-      <div className="container w-[80%] mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-center gap-8 md:gap-0 text-center md:text-left">
+    <footer className="bg-[#3e463c] z-1 text-white pt-12 pb-4 sm:mt-5 border-t border-gray-700 w-full">
+      <div className="container w-full mx-auto px-4 flex flex-col md:flex-row justify-between items-center md:items-center gap-8 md:gap-0 text-center md:text-left">
         {/* Left Side */}
         <div className="flex-1 mb-6 md:mb-0 flex flex-col items-center md:items-start">
           <div className="text-3xl font-bold mb-2">CLAW</div>
@@ -31,7 +31,7 @@ export default function Footer() {
           <div className="font-bold text-lg text-white">Claw Legaltech</div>
         </div>
       </div>
-      <div className="container mx-auto px-4 mt-8 border-t border-gray-700 pt-4 text-center text-gray-400 text-xs">
+      <div className="container mx-auto px-4 mt-8 border-t border-gray-700 pt-4 text-center text-white text-xs">
         © 2025 Claw LegalTech. All Rights Reserved.
       </div>
     </footer>
