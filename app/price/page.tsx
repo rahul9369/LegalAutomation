@@ -56,16 +56,6 @@ const plans = [
   },
 ];
 
-const featureRows = [
-  // "Lorem Ipsum Dolor",
-  // "Consectet Adipiscing",
-  // "Sed Dolusmod Tempor",
-  // "Incididunt Labore",
-  // "Dolore Magnaliqua",
-  // "Aliquip Cupidatat",
-  // "Proident Accusantium",
-];
-
 const capabilityRows = [
   "Case Management",
   "Daily Personalized Cause List from All Courts",
