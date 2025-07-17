@@ -13,7 +13,7 @@ const plans = [
     subtext: "Solo lawyers, interns, legal researchers, young lawyers",
     button: "Buy Now",
     // highlight: false,
-    features: ["1", "0", "30 Lorem", "30 Lorem", "", "Lipsum", "Hayalla"],
+    // features: ["1", "0", "30 Lorem", "30 Lorem", "", "Lipsum", "Hayalla"],
     capabilities: [true, true, true, true, true, false, false, false, false],
   },
   {
