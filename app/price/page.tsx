@@ -75,7 +75,7 @@ export default function PricingPage() {
       <div className="rounded-xl w-[90%] mx-auto pt-10">
         <Navbar />
       </div>
-      <main className="flex-1 w-full max-w-7xl mx-auto px-2 sm:px-6 py-8 sm:py-16">
+      <main className="flex-1 w-[95%] max-w-8xl mx-auto px-2 sm:px-6 py-8 sm:py-16">
         <h1 className="text-3xl sm:text-5xl font-bold text-center mb-4">
           Pricing Plans
         </h1>
@@ -154,7 +154,7 @@ export default function PricingPage() {
               <table className="w-full text-sm bg-gradient-to-br from-[#222a24] to-[#3e463c] table-fixed">
                 <thead>
                   <tr>
-                    <th className="text-left text-[10px] sm:text-sm font-semibold px-4 py-3 bg-gradient-to-br from-[#222a24] to-[#3e463c] border-b border-gray-100/10 w-[20%]">
+                    <th className="text-left text-[10px] sm:text-sm font-semibold px-4 py-3  border-b border-gray-100/10 w-[20%]">
                       features
                     </th>
                     {plans.map((plan, idx) => (
